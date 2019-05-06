@@ -1,0 +1,347 @@
+function getUrlParam(name) {
+	var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象
+	var r = window.location.search.substr(1).match(reg);  //匹配目标参数
+	if (r != null) return unescape(r[2]); return null; //返回参数值
+}
+//key   从服务器获取录音和文字的标识
+//shop  用户选择的店铺
+//
+
+//参数格式说明state=454541
+//如果key存在 则说明这个页面是展示页面，根据key去获取所需信息
+//如果key不存在，则是编辑页面
+
+var edit = 0,								//是否编辑状态，0 ：未编辑，1: 已编辑
+	style = 1,								//模版编号 1，2，3，4
+	step = 0,								//编辑是有效
+	openid = '',
+	nickname = '',
+	sender_nickname = '',
+	message = null,							//文字
+	voice = null,							//录音id
+	restaurant_preset = null,				//20字符内推荐的餐厅标识。仅用于Web前端自行标识。
+	restaurant_name = '',					//20字符内餐厅名称。
+	restaurant_addr = '',					//50字符内餐厅地址。
+	localId = null,
+	serverId = null,
+	appid = 'wx0d8f37886dbb9a44',
+	redirect_uri = encodeURIComponent('https://vplus-dev.vip.com/invitationcard-controller/'),
+
+	code = getUrlParam('code'),
+	oldState = getUrlParam('state'),
+
+	newState = 0;
+
+var oldKey = oldState || 234234,
+	newKey = 0;
+
+//分享配置数据
+var link = 'https://open.weixin.qq.com/connect/oauth2/authorize?appid=' + appid + '&redirect_uri=' + redirect_uri + '&response_type=code&scope=snsapi_userinfo&state=0#wechat_redirect', // 分享链接
+	imgUrl = '图片链接',
+	desc = '分享描述',
+	title = '分享标题';
+
+
+var inter = function() {
+	var cfg = {
+		/**
+		 * jssdk初始数据
+		 * @return {[type]} [description]
+		 */
+		config: function() {
+			this.url = 'http://vplus-dev.vip.com/invitationcard-controller/api/authorize';
+			this.type = 'get';
+			this.dataType = 'json';
+			this.data = {};
+		},
+		commit: function() {
+			this.url = "http://vplus-dev.vip.com/invitationcard-controller/api/card";
+			this.type = 'post';
+			this.dataType = "json";
+			this.data = {};
+		},
+		info: function() {
+			this.url = 'http://vplus-dev.vip.com/invitationcard-controller/api/card/' + oldKey;
+			this.type = 'get';
+			this.dataType = 'json';
+			this.data = {};
+		}
+	};
+
+	var inter = {
+		ajax: function( data ) {
+			return $.ajax(data);
+		},
+		execute: function( data , callback ) {
+			function cb( re ) {
+				if(typeof callback == 'object') {
+					var func = callback[0],
+						pare = callback[1];
+					func.call(pare, re);
+				} else {
+					callback(re);
+				}
+			}
+			this.ajax(data).done(cb);
+		},
+		/**
+		 * 数据混合
+		 * @param  {[type]} org       原始数据
+		 * @param  {[type]} des       新增数据
+		 * @param  {[type]} overwrite 是否覆盖
+		 * @return {[type]}           合并数据
+		 */
+		mix: function( org , des , overwrite ) {
+			overwrite = overwrite || 0; 
+			for(var k in des) {
+				if(!!overwrite || (!overwrite && org[k] == undefined)) {
+					org[k] = des[k];
+				}
+			}
+			return org;
+		},
+		/**
+		 * 外部调用入口
+		 * @param  {[type]}   index     调用模块
+		 * @param  {Function} callback  回调函数
+		 * @param  {[type]}   data      ajax请求参数
+		 * @param  {[type]}   overwrite data参数是否覆盖存在的同名参数
+		 * @param  {[type]}   param data参数是否覆盖存在的同名参数
+		 * @return {[type]}             无返回
+		 */
+		request: function( index , callback , data , overwrite , param ) {
+			if( !cfg[index] ) return;
+			if(typeof overwrite == 'object') {
+				param = overwrite;
+				overwrite = 0;
+			}
+			var obj = new cfg[index];
+			if(typeof param == "object") {
+				obj = this.mix(obj, param, 1);
+			}
+			if(typeof data == 'object') {
+				obj.data = this.mix( obj.data , data , overwrite );
+			}
+			this.execute( obj , callback );
+		}
+	};
+	return inter;
+}();
+
+var obj = {
+	localId: null,
+	/**
+	 * 0 未开始录音； 1 正在录音； 2 录音完成；3 正在播放录音
+	 * @type {Number}
+	 */
+	step: 0,
+	config: function( data ) {
+		/*
+		{
+		    "userinfo":{
+		        "openid": "",
+		        "nickname": ""
+		    },
+		    "js_config": {
+		        "appId": "", 
+		        "timestamp":0 ,
+		        "nonceStr": "",
+		        "signature": ""
+		    }
+		}
+		 */
+		openid = data.userinfo.openid;
+		nickname = data.userinfo.nickname;
+		wx.config({
+		    debug: true, 									// 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
+		    appId: data.js_config.appId, 					// 必填，公众号的唯一标识
+		    timestamp: data.js_config.timestamp, 			// 必填，生成签名的时间戳
+		    nonceStr: data.js_config.nonceStr, 				// 必填，生成签名的随机串
+		    signature: data.js_config.signature,			// 必填，签名，见附录1
+		    jsApiList: [
+		    	'startRecord',						//开始录音接口
+		    	'stopRecord',						//停止录音接口
+		    	'onVoiceRecordEnd', 				//监听录音自动停止接口
+		    	'playVoice', 						//播放语音接口
+		    	'pauseVoice',						//暂停播放接口
+		    	'stopVoice', 						//停止播放接口
+		    	'onVoicePlayEnd', 					//监听语音播放完毕接口
+		    	'uploadVoice',						//上传语音接口
+		    	'downloadVoice', 					//下载语音接口
+		    	'getNetworkType'					//获取网络状态接口
+		    ] 										// 必填，需要使用的JS接口列表，所有JS接口列表见附录2
+		});
+	},
+	commitVoice: function() {
+		wx.uploadVoice({
+		    localId: localId, 						// 需要上传的音频的本地ID，由stopRecord接口获得
+		    isShowProgressTips: 1, 					// 默认为1，显示进度提示
+		    success: function (res) {
+		        serverId = res.serverId; 			// 返回音频的服务器端ID
+		  		obj.commitData();
+		    }
+		});
+		// serverId = 'test1232';	//shanchu
+		// obj.commitData();     	//shanchu
+	},
+	commitData: function() {
+		message = $('#message').val();
+		restaurant_preset = nowTab + ',' + tabMap[nowTab].activeLoopIndex;
+		if(nowTab == 4 || tabMap[nowTab].activeLoopIndex == 3) {
+			restaurant_name = $('#swiper-container' + (nowTab + 1) + ' .other_text li input').eq(2).val();
+			restaurant_addr = $('#swiper-container' + (nowTab + 1) + ' .other_text li input').eq(3).val();
+		}
+		var data = {
+			openid: openid,
+			nickname: nickname,
+			style: style,
+			message: message,
+			voice: serverId,
+			restaurant_preset: restaurant_preset,
+			restaurant_name: restaurant_name,
+			restaurant_addr: restaurant_addr
+		};
+		inter.request('commit', [this.initLink, this], data);
+		// this.initLink({'id': '82348658'});
+	},
+	initLink: function( data ) {
+		newState = data.id;
+		newKey = newState;
+		link = 'https://open.weixin.qq.com/connect/oauth2/authorize?appid=' + appid + '&redirect_uri=' + redirect_uri + '&response_type=code&scope=snsapi_userinfo&state=' + newState + '#wechat_redirect'; // 分享链接
+	},
+	initShow: function( re ) {
+		/*
+			{
+			    "sender_nickname": "",
+			    "message":"",
+			    "voice": "http://path.to/voice.amr",
+			    "style": "", //提交时设定的风格标识
+			    "restaurant_preset": "", //提交的预设餐厅标识
+			    "restaurant_name":"",
+			    "restaurant_addr":""
+			}
+		*/
+
+	},
+	init: function() {
+		if(oldKey == 0) {
+			//显示编辑页面
+			$('.doc_select').show();
+			$('.doc_show').hide();
+			$('.doc').hide();
+		} else {
+			//显示展示界面
+			$('.doc_show').show();
+			$('.doc_select').hide();
+			$('.doc').hide();
+			inter.request('info', [this.initShow, this]);
+		}
+		inter.request('config', [this.config, this], {code: code});
+	}
+};
+obj.init();
+
+function render() {
+	if(step == 1) {
+		$("#btn").addClass('talk_btn_zhong').removeClass('talk_btn_qian')
+		//btn.value = '正在录音！......';
+	} else if(step == 2) {
+		$("#btn").addClass('talk_btn_hou').removeClass('talk_btn_zhong')
+		//btn.value = '播放！';
+	} else if(step == 3) {
+		$("#btn").addClass('talk_btn_fang').removeClass('talk_btn_hou')
+		//btn.value = '正在播放！......';
+	}
+}
+
+btn.addEventListener('click', function( e ) {
+	if(step == 0) {
+		step = 1;
+		wx.startRecord();					//录音
+	} else if(step == 1) {
+		step = 2;
+		wx.stopRecord({
+		    success: function (res) {
+		        localId = res.localId;
+		    }
+		});
+	} else if(step == 2) {
+		step = 3;
+		wx.playVoice({
+		    localId: localId
+		});
+	} else if(step == 3) {
+		step = 2;
+		wx.stopVoice({
+		    localId: localId
+		});
+	}
+	render();
+});
+
+wx.onVoiceRecordEnd({
+    complete: function (res) {
+        localId = res.localId;
+        step = 2;
+        render();
+    }
+});
+
+wx.onVoicePlayEnd({
+    success: function (res) {
+        // localId = res.localId;
+        step = 2;
+        render();
+    }
+});
+
+// wx.uploadVoice({
+//     localId: localId, 						// 需要上传的音频的本地ID，由stopRecord接口获得
+//     isShowProgressTips: 1, 					// 默认为1，显示进度提示
+//     success: function (res) {
+//         serverId = res.serverId; 			// 返回音频的服务器端ID
+//     }
+// });
+
+wx.onMenuShareTimeline({
+    title: title, // 分享标题
+    link: link,
+    imgUrl: imgUrl, // 分享图标
+    success: function () { 
+        // 用户确认分享后执行的回调函数
+    },
+    cancel: function () { 
+        // 用户取消分享后执行的回调函数
+
+    }
+});
+
+wx.onMenuShareAppMessage({
+    title: title, // 分享标题
+    desc: desc, // 分享描述
+    link: link, // 分享链接
+    imgUrl: imgUrl, // 分享图标
+    type: '', // 分享类型,music、video或link，不填默认为link
+    dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
+    success: function () { 
+        // 用户确认分享后执行的回调函数
+    },
+    cancel: function () { 
+        // 用户取消分享后执行的回调函数
+    }
+});
+
+summit_card.addEventListener('click', function(e) {
+	obj.commitVoice();
+});
+
+summit_show.addEventListener('click', function(e) {
+	//邀请
+	$('.doc_show').hide();
+	$('.doc_select').show();
+	$('.doc').hide();
+});
+
+summit_to.addEventListener('click', function(e) {
+	//展示
+});

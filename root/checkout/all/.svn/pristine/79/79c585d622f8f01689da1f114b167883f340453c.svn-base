@@ -1,0 +1,331 @@
+//@import 'h5_common.scss';
+$url:"../images/";
+//$url:"http://192.168.39.130/work/8.26/web/images/";
+$bordercolor: #ccc;
+$linkcolor: #ccc;
+$linkhover: #339933;
+@mixin img($p){background:url($url+$p) no-repeat;}
+@mixin wh($w , $h){width: $w; height:$h;}
+@mixin lt($l , $t){left: $l; top:$t;}
+@mixin rb($r , $b){right: $r; bottom:$b;}
+@mixin rt($r , $t){right: $r; top:$t;}
+@mixin bg($img,$rp){background:url($url + $img) $rp}
+.overflow_box{-o-text-overflow: ellipsis; text-overflow: ellipsis; overflow:hidden; white-space:nowrap;}
+body{}
+.clear{clear: both;font-size: 0;}
+.doc_select{
+	position: relative;	
+	display: none;
+	padding-top: 15px;
+	.select_con{
+		padding: 0 5%;
+		.select{
+			width: 50%;
+			float: left;
+			.select_pic{
+				position: relative;
+				padding: 5%;
+				.dab{
+				position: absolute;
+				@include rb(8%,8%);
+				@include wh(30px,30px);
+				@include bg("dab_n.png",no-repeat);
+				background-size: 100% 100%;
+				z-index: 6;
+				opacity: 1;
+				}
+				.dab_y{
+					@include bg("dab_y.png",no-repeat);
+					background-size: 100% 100%;
+				}
+			}
+			.select_text{
+				width: 100%;
+				height: 35px;
+				line-height: 35px;
+				text-align: center;
+				font-weight: bold;
+			}
+		}
+	}
+	.s_goat{
+		padding-top: 20px;
+	}	
+}
+.doc_show{
+	position: relative;	
+	background: #ffa56e;
+	//display: none;
+	.con{
+		width: 95%;
+		margin: 0 2.5%;	
+		background: #fff;
+		padding-top: 10px;	
+		.add_text{
+			margin: 20px 2.5%;
+			//min-height: 50px;
+			position: relative;
+			.user_pic{
+				width: 15%;		
+			}
+			.user_input{
+				@include wh(78%,100%);
+				@include rt(0,0);
+				border-radius:10px;
+				position: absolute;
+				@include bg('user_input.jpg',no-repeat);
+				background-size: 100% 100%;
+				padding:3px 0 0 4%;
+				textarea{
+					@include wh(95%,95%);
+					color:#999;
+					border:none;
+					background: none;
+					font-size: 12px;
+				}
+			}
+		}
+		.add_talk{
+			margin: 20px 2.5%;
+			//min-height: 50px;
+			position: relative;
+			.user_pic{
+				width: 15%;		
+			}
+			.user_talk{
+				@include wh(80%,100%);
+				@include rt(0,0);
+				border-radius:10px;
+				position: absolute;
+			}
+		}
+		.in_line{
+			@include wh(90%,0);
+			border-top:1px dashed #ccc;
+			font-size: 0;
+			line-height: 0;
+			margin:30px auto 20px auto;
+
+		}
+		.eat_text{
+			@include wh(100%,30px);
+			font-size: 14px;
+			line-height: 30px;
+			text-align: center;
+			span{
+				font-weight: bold;
+				color:#ffbb1c;
+				margin-right: 2px;
+			}
+		}
+		.summit_to{
+		padding-bottom: 10px;
+	}
+	}
+	.huawen{
+		margin: 0 2.5%;	
+	}
+	.pop_xy{
+		display: none;
+		@include wh(100%,100%);
+		@include lt(0,0);
+		position: fixed;
+		background-size: 100%;
+		background: rgba(0,0,0,0.8);
+		z-index: 50;
+	}
+}
+.doc{
+	position: relative;	
+	background: #ffa56e;
+	display: none;
+	.con{
+		width: 95%;
+		margin: 0 2.5%;	
+		background: #fff;
+		padding-top: 10px;	
+		.add_text{
+			margin: 20px 2.5%;
+			//min-height: 50px;
+			position: relative;
+			.user_pic{
+				width: 15%;		
+			}
+			.user_input{
+				@include wh(78%,100%);
+				@include rt(0,0);
+				border-radius:10px;
+				position: absolute;
+				@include bg('user_input.jpg',no-repeat);
+				background-size: 100% 100%;
+				padding:3px 0 0 4%;
+				textarea{
+					@include wh(95%,95%);
+					color:#999;
+					border:none;
+					background: none;
+					font-size: 12px;
+				}
+			}
+		}
+		.add_talk{
+			margin: 20px 2.5%;
+			//min-height: 50px;
+			position: relative;
+			.user_pic{
+				width: 15%;		
+			}
+			.user_talk{
+				@include wh(80%,100%);
+				@include rt(0,0);
+				border-radius:10px;
+				position: absolute;
+			}
+		}
+		.in_line{
+			@include wh(90%,0);
+			border-top:1px dashed #ccc;
+			font-size: 0;
+			line-height: 0;
+			margin:30px auto;
+
+		}
+		.tab_title{
+			@include wh(70%,35px);
+			padding: 0 15%;
+			color: #ccc;
+			.now{
+					color: #ffbb1c;
+				}
+			a{
+				@include wh(18%,100%);
+				color: #ccc;
+				display: inline-block;
+				text-align: center;	
+			}
+		}
+		.tab_con{
+			width: 100%;
+			height: 100%;
+			overflow: hidden;
+			position:absolute;
+			@include lt(0,0);
+			.dab{
+				position: absolute;
+				@include rt(5%,8%);
+				@include wh(30px,30px);
+				@include bg("dab_n.png",no-repeat);
+				background-size: 100% 100%;
+				z-index: 6;
+				opacity: 0.5;
+			}
+			.dab_y{
+				@include bg("dab_y.png",no-repeat);
+				background-size: 100% 100%;
+			}
+			.zi{
+				z-index: 5;
+			}
+			.tab_con_element{
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				//background: #fff;
+				@include lt(0,0);
+				.other_pic{
+					position: absolute;
+					@include wh(35%,100%);
+					@include lt(0,0);
+					z-index: 5;
+					img{
+						position: absolute;
+						@include lt(10%,0);
+						top:10%;
+						height: 80%;
+					}
+				}
+				.other_text{
+					position: absolute;
+					@include wh(60%,100%);
+					@include rt(0,0);
+					z-index: 5;
+					color: #000;
+					.other_text_a{
+						position: absolute;
+						@include lt(0,20%);
+						@include wh(100%,20%);
+						border-bottom:1px solid #ccc;
+					}
+					.other_text_b{
+						position: absolute;
+						@include lt(0,50%);
+						@include wh(100%,20%);
+						border-bottom:1px solid #ccc;
+					}
+					input{
+						@include wh(80%,22px);
+						border:none;
+						background: none;
+						font-size: 12px;
+						color:#ccc;
+					}
+				}
+			}
+		}
+	}
+	.huawen{
+		margin: 0 2.5%;	
+	}
+	.pop_fx{
+		display: none;
+		@include wh(100%,100%);
+		@include lt(0,0);
+		position: fixed;
+		background-size: 100%;
+		background: rgba(0,0,0,0.8);
+		z-index: 50;
+	}
+}
+.swiper-container {
+	width: 95%;
+	height: 83%;
+	color: #fff;
+	margin: 0 2.5%;
+	background: #f9f9f9;
+	text-align: center;
+}
+.swiper-slide{
+	position: relative;
+}
+.swiper-slide .title {
+  font-style: italic;
+  font-size: 42px;
+  margin-top: 80px;
+  margin-bottom: 0;
+  line-height: 45px;
+}
+.swiper-slide p {
+  font-style: italic;
+  font-size: 25px;
+}
+.pagination1,.pagination2,.pagination3,.pagination4,.pagination5 {
+  position: absolute;
+  left: 0;
+  text-align: center;
+  bottom:5px;
+  width: 100%;
+  background: #fff;
+}
+.swiper-pagination-switch {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 10px;
+  background: #e0e0e0;
+  //box-shadow: 0px 1px 2px #555 inset;
+  margin: 0 3px;
+  cursor: pointer;
+}
+.swiper-active-switch {
+  background: #ff9860;
+}

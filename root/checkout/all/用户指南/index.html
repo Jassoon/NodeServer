@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+    <head>
+        <meta charset="UTF-8">
+        <title>用户指南</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+        <meta content="yes" name="apple-mobile-web-app-capable">
+        <meta content="black" name="apple-mobile-web-app-status-bar-style">
+        <meta content="telephone=no" name="format-detection">
+        <meta name="apple-mobile-web-app-title" content="用户指南">
+        <script src="http://ap.vip.com/statics/touch/jquery.min.js"></script>
+        <script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+        <style type="text/css">
+            body {font-family:Arial,Verdana,Helvetica,"microsoft yahei",sans-serif;min-width:320px; background: #f5f5f5} body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td,figure {padding:0;margin:0;} fieldset,img{border:0;} address,caption,cite,code,dfn,em,th,var,optgroup {font-style:normal;font-weight:normal;} h1,h2,h3,h4,h5,h6 {font-size:100%;} input,button,textarea,select,optgroup,option {font-family:inherit;font-size:inherit;font-style:inherit;font-weight:inherit;} ol,ul,li {list-style:none;} table {border-collapse:collapse;border-spacing:0;}caption,th {text-align:left;} a,input,button{ -webkit-tap-highlight-color:rgba(0,0,0,0); -webkit-tap-highlight-color:transparent;/* For some Androids */ -webkit-appearance:none; -moz-appearance:none; text-decoration:none;}
+            /*定义最外面的容器宽度及样式*/
+            .ui-page {
+                width: 100%;
+                height: auto;
+                overflow: hidden;
+                position: relative;
+                background: #f5f5f5;
+				padding-bottom:20px;
+            }
+            /*定义页面全部图片的大小宽度100%*/
+            .ui-page img {
+                display: block;
+                margin: 0;
+                width: 100%;
+            }
+            /*头像*/
+            .ui-head-portrait {
+                width: 14.0625%;
+                position: absolute;
+            }
+            .ui-left {
+                left: 3.125%;
+            }
+            .ui-right {
+                right: 3.125%;
+            }
+            /*对话*/
+            .ui-div-dialog,
+			.ui-div-dialog-text {
+                width: 100%;
+                position: relative;
+				opacity:0;
+				/*visibility:block;
+				
+				display:none;
+				-webkit-transition:all ease-in 500ms;
+				-moz-transition:all ease-in 500ms;
+				-ms-transition:all ease-in 500ms;
+				-o-transition:all ease-in 500ms;
+				transition:all ease-in 500ms;
+				*/
+                display: none;
+            }
+			.ui-div-dialog-animation {
+                display: block;
+				animation:gonext linear 2000ms;
+				animation-fill-mode:forwards;
+			}
+            .ui-div-dialog-animation2 {
+                display: block;
+                animation:gonext2 linear 1000ms;
+                animation-fill-mode:forwards;
+            }
+			.ui-div-dialog-animation-text {
+                display: block;
+				animation:gonexttext linear 2000ms;
+				animation-fill-mode:forwards;
+			}
+			.ui-div-dialog {
+				margin-top: 15px;
+			}
+			.ui-div-dialog-text {
+				color:#333333;
+				padding: 10px 0;
+				text-align:center;
+			}
+			.ui-div-dialog-text h1{
+				font-size: 24px;
+				font-weight:normal;
+			}
+			.ui-div-dialog-text p {
+				font-size: 12px;
+			}
+			@keyframes gonext {
+				0%   { margin-top: 15px; opacity:0;}
+				30%  { margin-top: 15px; opacity:1;}
+                100% { margin-top: 15px; opacity:1;}
+			}
+
+            @keyframes gonext2 {
+                0%   { margin-top: 15px; opacity:0;}
+                100% { margin-top: 15px; opacity:1;}
+            }
+			@keyframes gonexttext {
+				0%   { margin-top: 15px; opacity:0;}
+				20%  { margin-top: 15px; opacity:1;}
+				80%  { margin-top: 15px; opacity:1;}
+				100% { margin-top: 15px; opacity:0; display:none}
+			}
+            /*设置了超出1024像素的宽度个别样式就以下面的为准*/
+            @media only screen and (min-width: 1024px) {
+                .ui-page {
+                    width: 640px;
+                    margin: 0 auto;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="ui-page">
+        	<audio id="audio1" src="images_user_guide/5473.wav" preload="auto">
+				您的浏览器不支持 audio 标签。
+			</audio>
+			<audio id="audio2" src="images_user_guide/5473.wav" preload="auto">
+				您的浏览器不支持 audio 标签。
+			</audio>
+            <!-- begin -->
+            <div class="ui-div-dialog ui-div-dialog-animation" id="animate1">
+                <div class="ui-head-portrait ui-left">
+                    <img class="ui-default-ico" src="images_user_guide/default_ico.png">
+                </div>
+                <div class="ui-img-dialog">
+                    <img src="images_user_guide/img_01.png">
+                </div>
+            </div>
+            <!-- text1 -->
+            <div class="ui-div-dialog-text" id="animatetext1">
+            	<h1>一句话说明你需要的帮助</h1>
+            </div>
+            <!-- 2 -->
+            <div class="ui-div-dialog" id="animate2">
+                <div class="ui-head-portrait ui-right">
+                    <img class="ui-default-none" src="images_user_guide/default_none.jpg">
+                </div>
+                <div class="ui-img-dialog">
+                    <img src="images_user_guide/img_02.png">
+                </div>
+            </div>
+            <!-- text2 -->
+            <div class="ui-div-dialog-text" id="animatetext2">
+            	<h1>接下来的麻烦事都交给助理</h1>
+            </div>
+            <!-- 3 -->
+            <div class="ui-div-dialog" id="animate3">
+                <div class="ui-head-portrait ui-left">
+                    <img src="images_user_guide/default_ico.png">
+                </div>
+                <div class="ui-img-dialog">
+                    <img src="images_user_guide/img_03.png">
+                </div>
+            </div>
+            <!-- text3 -->
+            <div class="ui-div-dialog-text" id="animatetext3">
+            	<h1>确认并支付</h1>
+                <p>助理服务本身不收取费用</p>
+            </div>
+            <!-- 4 -->
+            <div class="ui-div-dialog" id="animate4">
+                <div class="ui-head-portrait ui-right">
+                    <img class="ui-default-none" src="images_user_guide/default_none.jpg">
+                </div>
+                <div class="ui-img-dialog">
+                    <img src="images_user_guide/img_04.png">
+                </div>
+            </div>
+            <!-- text4 -->
+            <div class="ui-div-dialog-text" id="animatetext4">
+            	<h1>助理帮您完成预定</h1>
+            </div>
+            <!-- 5 -->
+            <div class="ui-div-dialog" id="animate5">
+                <div class="ui-head-portrait ui-left">
+                    <img src="images_user_guide/default_ico.png">
+                </div>
+                <div class="ui-img-dialog">
+                    <img src="images_user_guide/img_05.png">
+                </div>
+            </div>
+            <!-- 6 -->
+            <div class="ui-div-dialog" id="animate6">
+                <div class="ui-head-portrait ui-right">
+                    <img class="ui-default-none" src="images_user_guide/default_none.jpg">
+                </div>
+                <div class="ui-img-dialog">
+                    <img src="images_user_guide/img_06.png">
+                </div>
+            </div>
+            <!-- text5 -->
+            <div class="ui-div-dialog-text" id="animatetext5">
+            	<h1>您的评价会让我们做得更好</h1>
+            </div>
+            <!-- 7 -->
+            <div class="ui-div-dialog" id="animate7">
+                <div class="ui-head-portrait ui-left">
+                    <img src="images_user_guide/default_ico.png">
+                </div>
+                <div class="ui-img-dialog">
+                    <img src="images_user_guide/img_07.png">
+                </div>
+            </div>
+            <!-- 8 -->
+            <div class="ui-div-dialog" id="animate8">
+                <div class="ui-head-portrait ui-right">
+                    <img class="ui-default-none" src="images_user_guide/default_none.jpg">
+                </div>
+                <div class="ui-img-dialog">
+                    <img src="images_user_guide/img_08.png">
+                </div>
+            </div>
+            <!-- 9 -->
+            <div class="ui-div-dialog" id="animate9">
+                <div class="ui-head-portrait ui-left">
+                    <img src="images_user_guide/default_ico.png">
+                </div>
+                <div class="ui-img-dialog">
+                    <img src="images_user_guide/img_09.png">
+                </div>
+            </div>
+            <div class="ui-div-dialog" id="animate10">
+                <img src="images_user_guide/img_10.png">
+            </div>
+            <div class="ui-div-dialog" id="animate11">
+                <img src="images_user_guide/img_11.png">
+            </div>
+            <div class="ui-div-dialog" id="animate12">
+                <img src="images_user_guide/img_12.png">
+            </div>
+            <div class="ui-div-dialog" id="animate13">
+                <img src="images_user_guide/img_13.png">
+            </div>
+            <div class="ui-div-dialog" id="animate14">
+                <img src="images_user_guide/img_14.png">
+            </div>
+            <div class="ui-div-dialog" id="animate15">
+                <img src="images_user_guide/img_15.png">
+            </div>
+            <!-- end -->
+        </div>
+    </body>
+    <script type="text/javascript">
+		function gonext (animateid,animatecss,animateactions){
+			function cb() {
+				animateactions(animatecss);
+			}
+			animateid.addEventListener("webkitAnimationEnd", cb);
+			animateid.addEventListener("animationend", cb);
+		}
+        function animate(animatecss) {
+            animatecss.classList.add("ui-div-dialog-animation");
+            window.scrollTo(0,document.body.scrollHeight);
+            //$('html,body').animate({scrollTop:animateid.offset.top}, 100);
+        }
+        function animate_2(animatecss) {
+            animatecss.classList.add("ui-div-dialog-animation2");
+            window.scrollTo(0,document.body.scrollHeight);
+            //$('html,body').animate({scrollTop:animateid.offset.top}, 100);
+        }
+		function animatetext(animatecss) {
+			animatecss.classList.add("ui-div-dialog-animation-text");
+			
+		}
+		gonext (animate1, animatetext1, animatetext);
+		gonext (animatetext1, animate2, animate);
+		gonext (animate2, animatetext2, animatetext);
+		gonext (animatetext2, animate3, animate);
+		gonext (animate3, animatetext3, animatetext);
+		gonext (animatetext3, animate4, animate);
+		gonext (animate4, animatetext4, animatetext);
+		gonext (animatetext4, animate5, animate);
+		gonext (animate5, animate6, animate);
+		gonext (animate6, animatetext5, animatetext);
+		gonext (animatetext5, animate7, animate);
+		gonext (animate7, animate8, animate);
+		gonext (animate8, animate9, animate);
+		gonext (animate9, animate10, animate);
+		gonext (animate10, animate11, animate_2);
+		gonext (animate11, animate12, animate_2);
+		gonext (animate12, animate13, animate_2);
+		gonext (animate13, animate14, animate_2);
+		gonext (animate14, animate15, animate_2);
+		
+		
+		function texthide (animatetexts,functiontxt){
+			animatetexts.addEventListener("webkitAnimationEnd",functiontxt);
+			animatetexts.addEventListener("animationend",functiontxt);
+			function functiontxt (){
+				animatetexts.style.display = "none";
+			}
+		}
+		texthide (animatetext1,animatetext1);
+		texthide (animatetext2,animatetext2);
+		texthide (animatetext3,animatetext3);
+		texthide (animatetext4,animatetext4);
+		texthide (animatetext5,animatetext5);
+		
+		/*document.getElementById("animate6").addEventListener("webkitAnimationEnd",scrollfun1);
+		document.getElementById("animate6").addEventListener("animationend",scrollfun1);
+		
+		function scrollfun1 (){
+			$('html,body').animate({scrollTop:$('#animate6').offset().top}, 800);
+		}
+		
+		document.getElementById("animate12").addEventListener("webkitAnimationEnd",scrollfun2);
+		document.getElementById("animate12").addEventListener("animationend",scrollfun2);
+		
+		function scrollfun2 (){
+			$('html,body').animate({scrollTop:$('#animate10').offset().top}, 800);
+		}*/
+
+		for (var i=1; i<=9; i++){
+			document.getElementById("animate"+i).addEventListener("webkitAnimationStart",audiofun1);
+			document.getElementById("animate"+i).addEventListener("animationstart",audiofun1);
+		}
+		
+        function audiofun1 (){
+        	document.getElementById("audio1").play();
+        }
+    </script>
+    <!--CSS3前缀-->
+    <script type="text/javascript" src="http://h.vipstatic.com/upload/actpics/act/common/prefixfree.min.js"></script>
+    <!--微信分享-->
+    <script type="text/javascript" src="http://weixin-static.vip.com/uploadfiles/viplittlemodel/js/weixinshare.js"></script>
+    <script>
+        var thecurrentlink = window.location.href;
+        var args={
+            Edits:true,
+            Title:"教你学会召唤Ta！",
+            FrendTitle:"教你学会召唤Ta！",
+            Descs:"我有助理了，去领你的吧",
+            Links:thecurrentlink,
+            Photo:"http://weixin-static.vip.com/uploadfiles/s-user-guide/images_user_guide/default_ico.png"
+        }
+    </script>
+
+    <script type="text/javascript">
+        function getUrlParam(name) {
+            var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象
+            var r = window.location.search.substr(1).match(reg);  //匹配目标参数
+            if (r != null) return unescape(r[2]); return null; //返回参数值
+        }
+    </script>
+    
+</html>

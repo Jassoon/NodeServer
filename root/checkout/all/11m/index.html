@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<title>A君和Ta的故事</title>
+<script src="http://s2.vipstatic.com/js/public/jquery-1.10.2.js?12015102201"></script>
+</head>
+<body>
+<!-- <script src="images/jquery.min.js" "text/javascript"></script> -->
+
+<link href="images/jquery.fullPage.css" rel="stylesheet" type="text/css">
+<script src="images/jquery.fullPage.js" "text/javascript"></script>
+<script>
+
+$(function(){
+    
+    if($.browser.msie && $.browser.version < 6){
+        // $('body').addClass('ltie4');
+    }
+    $('#fullpage').fullpage({
+        verticalCentered: false,
+        // anchors: ['page1', 'page2', 'page3', 'page4'],
+        navigation: true,
+        // onLeave: function(index, nextIndex, direction) {
+        //     if(nextIndex == 15){
+        //         $('.arrow_next').hide();
+        //         $('.arrow_top').show();
+        //     }
+        //     else{
+        //         $('.arrow_next').show();
+        //         $('.arrow_top').hide();
+        //     }
+        // }
+    });
+    // $('.arrow_next').click(function() {
+    //     $('#fullpage').fullpage.moveSectionDown();
+    // });
+    // $('.arrow_top').click(function(){
+    //     $('#fullpage').fullpage.moveTo(1);
+    // }); 
+
+});
+</script>
+
+<style type="text/css">
+#fullpage img{ width: 100%;}
+.section{ position: relative; overflow: hidden;}
+.section .bg { position: absolute; left: 0; top: 0; width: 100%; height: 100%; background:#ffffff;}
+
+
+.part01-text,.part02-text,.part02-text01,.part02-light-01,.part02-light-02,.part04-text-01,.part04-text-02,.part05-line,.part05-clean,.part05-laundry,.part05-takeaway,.part05-gift,.part05-icon-01,.part05-icon-02,.part05-icon-03,.part05-icon-04,.part05-seal,.part05-iphone,.bg05,.part07-nushen-01,.part07-light,.part07-text,.part07-arrow,.part07-xin01,.part07-xin02,.part07-nushen-02,.part07-bg,.part07-book,.part07-sa01,.part07-sa02,.part07-sa03,.part07-sa04,.bg07,.part08-text,.part08-icon01,.part08-m,.part08-v,.part08-icon02,.part07-nushen-03{ position:absolute;}
+.part01-text{ width:100%; height:auto; top:50%; left:0; margin-top: -114px; }
+.active .part01-text{ animation: part01-text 2.5s ease-out 0.5s 1 forwards; opacity: 0;  }
+
+/*part01*/
+.part02-text,.part02-text01{  width:100%; height:auto; top:50%; right:0; margin-top: -150px;}
+.active .part02-text{ animation: part02-text 2s ease-out 3s 1 forwards; opacity: 0; }
+@media screen and (max-width: 320px){
+.active .part02-text{ margin-top: -140px;}
+}
+.active .part02-text01{ animation: part02-text01 2s ease-out 5.2s 1 forwards; opacity: 0; }
+@media screen and (max-width: 320px){
+.active .part02-text01{ margin-top: -140px;}
+}
+.part02-light-01{ width:32px; height:52px; top:50%; left:50%; margin-top: -120px; margin-left: -10px; background-image: url(images/prat03-02.png); background-size: 100% 100%;}
+.active .part02-light-01{ animation: part02-light-01 0s ease-out 5.5s 1 forwards; opacity: 0; }
+.part02-light-02{width:17px; height:28px; top:50%; left:50%; margin-top: -130px; margin-left: 20px; background-image: url(images/prat03-03.png); background-size: 100% 100%; }
+.active .part02-light-02{ animation: part02-light-02 1.5s ease-out 6s 1 forwards; opacity: 0;}
+.active .w01{ animation: part02-light-01 1s ease-out 6s 1 forwards; opacity: 0;}
+.active .w02{ animation: part02-light-01 2s ease-out 1s 1 forwards; opacity: 0;}
+.active .w03{ animation: part02-light-01 2s ease-out 5s 1 forwards; opacity: 0;}
+.active .w04{ animation: part02-light-01 2s ease-out 1s 1 forwards; opacity: 0;}
+.active .w05{ animation: part02-light-01 1s ease-out 17.5s 1 forwards; opacity: 0;}
+.active #mybgmuisc{animation: part02-light-01 1s ease-out 1s 1 forwards; opacity: 0;}
+.active #part08m{animation: part02-light-01 1s ease-out 3.8s 1 forwards; opacity: 0;}
+
+/*part04*/
+.part04-hand{ height:100%; background-image: url(images/prat04-hand.png); background-size:100% auto ; background-position: center center; background-repeat: no-repeat; }
+.part04-text-01{ width:52.66666666666667%; height:auto; top:19.1904047976012%; left:24.26666666666667%;}
+.active .part04-text-01{ animation: part04-text-01 0.3s ease 0.8s 1 forwards; opacity: 0;}
+@media screen and (max-height: 480px) and (max-width: 320px){
+.active .part04-text-01{ top:19.15269196822595%}
+}
+.part04-text-02{ width:52.66666666666667%; height:auto; top:39.58020989505247%; left:24.26666666666667%;}
+.active .part04-text-02{ animation: part04-text-01 0.3s ease-out 1.5s 1 forwards; opacity: 0;}
+@media screen and (max-height: 480px) and (max-width: 320px){
+.active .part04-text-02{ top:35.08245877061469%}
+}
+
+/*part05*/
+.part05-line{ width:100%; height:auto; top:0; right:0;}
+.active .part05-line{ animation: part05-line 0.3s ease-in 0.7s 1 forwards; opacity: 0;}
+.part05-clean{ width:67.73333333333333%; height:auto; top:-7%; right:0;}
+.active .part05-clean{ animation: part05-clean 0.3s ease-in 1s 1 forwards; opacity: 0;}
+.part05-laundry{ width:66.66666666666667%; height:auto; bottom:-7%; left:0;}
+.active .part05-laundry{ animation: part05-laundry 0.3s ease-in 1.3s 1 forwards; opacity: 0;}
+.part05-takeaway{ width:54.66666666666667%; height:auto; bottom:-4.5%; right:0;}
+.active .part05-takeaway{ animation: part05-takeaway 0.3s ease-in 1.6s 1 forwards; opacity: 0;}
+.part05-gift{ width:54.66666666666667%; height:auto; top:-9.8%; left:0;}
+.active .part05-gift{ animation: part05-gift 0.3s ease-out 1.9s 1 forwards; opacity: 0;}
+.part05-icon-01{ width:20.93333333333333%; height:auto; top:5%; right:10%;}
+.active .part05-icon-01{ animation: part05-icon-01 0.3s ease-out 1s 1 forwards; opacity: 0;}
+.part05-icon-02{ width:20.93333333333333%; height:auto; top:65%; left:5%;}
+.active .part05-icon-02{ animation: part05-icon-02 0.3s ease-out 1.3s 1 forwards; opacity: 0;}
+.part05-icon-03{ width:20.93333333333333%; height:auto; top:85%; right:5%;}
+.active .part05-icon-03{ animation: part05-icon-03 0.3s ease-out 1.6s 1 forwards; opacity: 0;}
+.part05-icon-04{ width:20.93333333333333%; height:auto; top:3%; left:5%;}
+.active .part05-icon-04{ animation: part05-icon-04 0.3s ease-out 1.9s 1 forwards; opacity: 0;}
+.part05-seal{ width:57.6%; height:auto; top:50%; left:50%; margin-top:-25%; margin-left: -28.8%; }
+.active .part05-seal{ animation: part05-seal 0.3s ease-out 2.5s 1 forwards; opacity: 0;}
+.part05-iphone{ width:100%; height:auto; bottom:-30%; left:0%; }
+.active .part05-iphone{ animation: part05-iphone 1.6s linear 3s infinite forwards;}
+.active .part05-iphone-m{ animation: part05-iphone 3.5s linear 4s 1 forwards;}
+.active .bg05{ animation: bg05 0.3s linear 3.5s 1 forwards;}
+
+.part07-nushen-01,.part07-nushen-02,.part07-bg,.part07-nushen-03{ width:100%; height:auto; top:0%; left:0%; }
+.active .part07-bg{ animation: part07-bg 0.7s linear 4.5s 1 forwards;}
+.active .part07-light{ animation: part07-light 0.5s linear 0.8s 1 forwards; opacity: 0; width:100%; height:auto; top:0%; left:0%; }
+.active .part07-nushen-01{ animation: part07-nushen-01 0.5s linear 1.3s 1 forwards; opacity: 0;}
+.part07-text{ width:32.8%; height:auto; top:18%; left:34.66666666666667%; }
+.active .part07-text{ animation: part07-text 1s linear 1.5s 1 forwards; opacity: 0;}
+.part07-arrow{ width:24px; height:auto; top:24%; left:52%;}
+.active .part07-arrow{ animation: part07-arrow 0.5s linear 1.5s infinite alternate; opacity: 0; }
+.part07-xin01{ width:67.6%; height:auto; top:26%; left:20%;}
+.active .part07-xin01{ animation: part07-xin 0.7s linear 1.5s infinite alternate; opacity: 0; }
+.part07-xin02{ width:67.6%; height:auto; top:32%; left:18%;}
+.active .part07-xin02{ animation: part07-xin 0.7s linear 1.7s infinite alternate; opacity: 0; transform-origin:center center; transform:rotate(30deg);  }
+.active .part07-nushen-02{ animation: part07-nushen-02 0.7s linear 4s 1 forwards; opacity: 0;}
+/*.part07-book{ width:38.66666666666667%; height:auto; top:50%; left:22%; margin-top: 44px;}
+.active .part07-book{ animation: part07-book 0.2s ease-in 4.3s 1 forwards; opacity: 0; }
+@media screen and (max-height: 480px) and (max-width: 320px){
+.part07-book{  margin-top: 60px;}
+}*/
+.part07-sa01{ width:66%; height:auto; top:8%; left:22%;}
+.active .part07-sa01{ animation: part07-sa01 2.5s ease-out 5s 1 forwards; opacity: 0; }
+.part07-sa02{ width:66%; height:auto; bottom:10px; left:0;}
+.active .part07-sa02{ animation: part07-sa02 2.5s ease-out 7.5s 1 forwards; opacity: 0; }
+.active .bg07{ animation: bg07 1.5s linear 10.0s 1 forwards;}
+
+.part07-sa03{ width:66%; height:auto; top:8%; left:22%;}
+.active .part07-sa03{ animation: part07-sa01 2.5s ease-out 16s 1 forwards; opacity: 0; }
+.part07-sa04{ width:66%; height:auto; bottom:10px; left:0;}
+.active .part07-sa04{ animation: part07-sa02 2.5s ease-out 12.5s 1 forwards; opacity: 0; }
+.active .part07-nushen-03{ animation: part07-nushen-02 0.3s linear 15.5s 1 forwards; opacity: 0;}
+
+
+.part08-text{ width:74%; height:auto; top:48%; left:100%; font-size: 14px; line-height: 1.2em; color: #000000; font-weight: 600;}
+.active .part08-text{ animation: part08-text 5s ease-out 0.5s 1 forwards; }
+.part08-icon01{ width:41.06666666666667%; height:auto; top:32%; left:100%; font-size: 14px; line-height: 1.2em; color: #000000; font-weight: 600;}
+.active .part08-icon01{ animation: part08-icon01 5s ease-out 0.5s 1 forwards; }
+.part08-m{ width:85.33333333333333%; height:auto; top:-100%; left:8%;}
+.active .part08-m{ animation: part08-m 2s ease-out 3.5s 1 forwards; }
+.part08-m .fx-w{ width: 270px;height: 18px; position: absolute;bottom: 30px;left: 50%; margin-left: -130px; color: #000000; font-size: 12px;}
+.part08-m .fx-w ul{ margin:0; padding: 0; list-style: none;}
+.part08-m .fx-w li{ float: left; list-style: none; height: 18px;}
+.part08-m .fx-w .fx-name{  text-align: right; width: 73px; word-wrap: break-word; overflow: hidden;line-height: 18px; }
+.part08-m .fx-w .fx-text{  text-align: left; width: 196px; line-height: 18px; }
+.part08-icon02{ width:5.333333333333333%; height:auto; top:28%; left:67%;}
+.active .part08-icon02{ animation: part08-icon02 0.8s ease-out 4.5s 1 forwards; opacity: 0; }
+.part08-v{ width:27px; height:auto; top:50.2%; left:45.5%;}
+.active .part08-v{ animation: part08-v 2s ease-out 4.5s infinite forwards;  }
+
+#fp-nav{ display: none;}
+
+/*音效*/
+#music{ display: block; width:40px; height:40px; background:url(images/music.png) no-repeat 0px -40px; background-size:100%; border-radius:20px; pointer-events:auto; position:absolute; top:10px; right:10px; z-index: 999}
+#music.on{background-position:0 0}
+
+
+@keyframes part01-text
+{
+0%   { margin-top: -60px; opacity:0; }
+15%  { margin-top: -120px; opacity:1; }
+85%  { margin-top: -120px; opacity:1; }
+100% { margin-top: -220px; opacity:0; }
+}
+@keyframes part02-text
+{
+0%   { opacity:0; transform:scale(0.2,0.2); transform-origin:274px bottom; }
+15%  { opacity:1; transform:scale(1,1); transform-origin:274px bottom; }
+85%  { opacity:1; transform:scale(1,1); transform-origin:274px bottom; margin-top: -150px; }
+100% { opacity:0; transform:scale(1,1); transform-origin:274px bottom; margin-top: -250px; }
+}
+@keyframes part02-text01
+{
+0%   { opacity:0; transform:scale(0.2,0.2); transform-origin:274px bottom; }
+15%  { opacity:1; transform:scale(1,1); transform-origin:274px bottom; }
+85%  { opacity:1; transform:scale(1,1); transform-origin:274px bottom; }
+100% { opacity:1; transform:scale(1,1); transform-origin:274px bottom; }
+}
+
+@keyframes part02-light-01
+{
+0%   { opacity:1; margin-top: -110px;}
+100%  { opacity:1; margin-top: -120px; }
+
+}
+@keyframes part02-light-02
+{
+0%   { opacity:0; }
+10%  { opacity:1; }
+20%  { opacity:0; }
+30%  { opacity:1; }
+100% { opacity:1; }
+}
+
+@keyframes part04-text-01
+{
+0%   { margin-top:10px; opacity:0;}
+100% { margin-top:0px; opacity:1;}
+}
+
+@keyframes part05-line
+{
+0%   { opacity:0; top: 0% }
+100% { opacity:1; top: 0% }
+
+}
+@keyframes part05-clean
+{
+0%   { top:-20%; right:-10%; opacity:0; }
+100% { top:0%; right:0; opacity:1; }
+}
+
+@keyframes part05-laundry
+{
+0%   { bottom:-20%; left:-10%; opacity:0; }
+100% { bottom:-10%; left:0%; opacity:1; }
+}
+
+@keyframes part05-takeaway
+{
+0%   { bottom:-20%; right:-10%; opacity:0; }
+100% { bottom:-10%; right:0; opacity:1; }
+}
+
+@keyframes part05-gift
+{
+0%   { top:-20%; left:-20%; opacity:0; }
+100%   { top:-5%; left:-4.6%; opacity:1; }
+}
+
+@keyframes part05-icon-01
+{
+0%   { top:5%; right:10%; opacity:0; }
+100% { top:10%; right:10%; opacity:1; }
+}
+
+@keyframes part05-icon-02
+{
+0%   { top:65%; left:5%; opacity:0; }
+100% { top:70%; left:5%; opacity:1; }
+}
+
+@keyframes part05-icon-03
+{
+0%   { top:85%; right:5%; opacity:0; }
+100% { top:80%; right:5%; opacity:1; }
+}
+
+@keyframes part05-icon-04
+{
+0%   { top:3%; left:5%; opacity:0; }
+100% { top:8%; left:5%; opacity:1; }
+}
+
+@keyframes part05-seal
+{
+0%   { opacity:0; transform:scale(2.5,2.5); transform-origin:center center;margin-top:-25%;}
+100% { opacity:1; transform:scale(1,1); transform-origin:center center;margin-top:-25%; }
+}
+
+@keyframes bg05
+{
+0%   { top:0%; }
+100% { top:-20%; }
+}
+
+@keyframes part05-iphone
+{
+0%   { transform-origin:center center; transform:rotate(0deg); }
+3%   { transform-origin:center center; transform:rotate(10deg); }
+6%   { transform-origin:center center; transform:rotate(0deg); }
+9%   { transform-origin:center center; transform:rotate(-10deg); }
+12%  { transform-origin:center center; transform:rotate(0deg); }
+15%  { transform-origin:center center; transform:rotate(10deg); }
+18%  { transform-origin:center center; transform:rotate(0deg); }
+21%  { transform-origin:center center; transform:rotate(-10deg); }
+24%  { transform-origin:center center; transform:rotate(0deg); }
+100% { transform-origin:center center; transform:rotate(0deg); }
+}
+
+@keyframes part07-nushen-01
+{
+0%   { opacity:0; }
+100% { opacity:1; }
+}
+@keyframes part07-nushen-02
+{
+0%   { opacity:0; }
+100% { opacity:1; }
+}
+
+@keyframes part07-light
+{
+0%   { opacity:0; top: -10%; transform-origin:top center; transform:scale(1,1); }
+100% { opacity:1; top: 0%; transform-origin:top center; transform:scale(1.2,1.2);}
+}
+@keyframes part07-text
+{
+0%   { opacity:0; transform-origin:70px 30px; transform:rotate(0deg); top:22%; }
+30%   { opacity:1; transform-origin:70px 30px; transform:rotate(0deg);top:18%; }
+50%   { opacity:1; transform-origin:70px 30px; transform:rotate(0deg);top:18%; }
+53%   { opacity:1; transform-origin:70px 30px; transform:rotate(10deg);top:18%; }
+56%   { opacity:1; transform-origin:70px 30px; transform:rotate(0deg); top:18%;}
+59%   { opacity:1; transform-origin:70px 30px; transform:rotate(-10deg); top:18%;}
+62%   { opacity:1; transform-origin:70px 30px; transform:rotate(0deg); top:18%;}
+65%   { opacity:1; transform-origin:70px 30px; transform:rotate(10deg);top:18%; }
+68%   { opacity:1; transform-origin:70px 30px; transform:rotate(0deg);top:18%; }
+71%   { opacity:1; transform-origin:70px 30px; transform:rotate(-10deg); top:18%;}
+74%   { opacity:1; transform-origin:70px 30px; transform:rotate(0deg); top:18%;}
+100%  { opacity:1; transform-origin:70px 30px; transform:rotate(0deg);top:18%; }
+}
+@keyframes part07-arrow
+{
+0%    { transform-origin:right top; top:24%; left:52%; opacity: 0; }
+100%  { transform-origin:right top; top:26%; left:50%; opacity: 1;}
+}
+@keyframes part07-xin
+{
+0%    { opacity: 0; }
+100%  { opacity: 1;}
+}
+@keyframes part07-bg
+{
+0%    { opacity: 1; }
+100%  { opacity: 0;}
+}
+@keyframes part07-book
+{
+0%   {  left:5%; opacity:0; }
+100% {  left:25%; opacity:1; }
+}
+@keyframes part07-sa01
+{
+0%   { opacity:0; transform:scale(0.2,0.2); transform-origin:100px bottom;}
+10%  { opacity:1; transform:scale(1,1); transform-origin:100px bottom; }
+90%  { opacity:1; transform:scale(1,1); transform-origin:100px bottom; }
+100% { opacity:0; transform:scale(1,1); transform-origin:100px bottom; }
+}
+@keyframes part07-sa02
+{
+0%   { opacity:0; transform:scale(0.2,0.2); transform-origin:center bottom;}
+10%  { opacity:1; transform:scale(1,1); transform-origin:center bottom; }
+90%  { opacity:1; transform:scale(1,1); transform-origin:center bottom; }
+100% { opacity:0; transform:scale(1,1); transform-origin:center bottom; }
+}
+@keyframes bg07
+{
+0%   { top:0; }
+15%   { top:-280px; }
+85%  { top:-280px; }
+100% { top:0; }
+}
+@keyframes part08-text
+{
+0%   { left:100%; }
+10%  { left:14%; }
+75%  { left:14%; transform-origin:center center; transform:rotate(0deg);top:48%; }
+/*85%  { left:-100%;  top:48%; transform-origin:center center; transform:rotate(0deg);}*/
+100% { left:-100%; transform-origin:center center; transform:rotate(-180deg);top:100%;}
+}
+@keyframes part08-icon01
+{
+0%   { left:-100%; }
+10%  { left:33.6%; }
+75%  { left:33.6%;  transform-origin:center center; transform:rotate(0deg);top:32%; }
+/*85%  { left:100%;}*/
+100% { left:100%; transform-origin:center center; transform:rotate(180deg);top:100%; }
+}
+@keyframes part08-m
+{
+0%   { top:-100%; }
+25%  { top:-35%; }
+50%  { top:-35%; }
+100% { top:13%; }
+}
+@keyframes part08-icon02
+{
+0%   { opacity:0; transform:scale(0.2,0.2); transform-origin:center center;}
+10%  { opacity:1; transform:scale(1,1); transform-origin:center center; }
+90%  { opacity:1; transform:scale(1,1); transform-origin:center center; }
+100% { opacity:0; transform:scale(0.2,0.2); transform-origin:center center; }
+}
+@keyframes part08-v
+{
+0%   {  transform:rotateY(0deg)}
+20%  {  transform:rotateY(180deg) }
+40%  {  transform:rotateY(0deg) }
+60%  {  transform:rotateY(0deg) }
+100% {  transform:rotateY(0deg) }
+}
+
+</style>
+
+
+<div id="music"></div>
+<div id="fullpage">
+    
+    <div class="section section1">
+        <div class="bg bg01">
+            <div class="part01-text"><img src="images/prat01-01.png"></div>
+            <div class="part02-text" id="part01text01"><img src="images/prat02-01.png"></div>
+            <div class="part02-text01" id="part01text02"><img src="images/prat03-01.png"></div>
+            <div class="part02-light-01" id="light"></div>
+            <div class="part02-light-02"></div>
+            <div class="w01" id="move01"></div>
+            <div id="mybgmuisc"></div>
+        </div>
+    </div>
+    <div class="section section2">
+        <div class="bg bg04">
+            <div class="part04-hand"></div>
+            <div class="part04-text-01" id="qipao01"><img src="images/part04-text-01.png"></div>
+            <div class="part04-text-02" id="qipao02"><img src="images/part04-text-02.png"></div>
+            <div class="w02" id="move02"></div>
+        </div>
+    </div>
+    <div class="section section3">
+        <div class="bg bg05">
+            <!-- <div class="part05-clean"><img src="images/part05-clean.png"></div> -->
+            <div class="part05-laundry" id="fui02"><img src="images/part05-laundry.png"></div>
+            <div class="part05-takeaway" id="fui03"><img src="images/part05-takeaway.png"></div>
+            <div class="part05-gift" id="fui04"><img src="images/part05-gift.png"></div>
+            <div class="part05-clean" id="fui01"><img src="images/part05-clean.png"></div>
+            <div class="part05-line"><img src="images/part05-line.png"></div>
+            <div class="part05-icon-01"><img src="images/part05-icon-01.png"></div>
+            <div class="part05-icon-02"><img src="images/part05-icon-02.png"></div>
+            <div class="part05-icon-03"><img src="images/part05-icon-03.png"></div>
+            <div class="part05-icon-04"><img src="images/part05-icon-04.png"></div>
+            <div class="part05-seal" id="gaizhan"><img src="images/part05-seal.png"></div>
+            <div class="part05-iphone"><img src="images/part05-iphone.png"></div>
+            <div class="part05-iphone-m" id="zhengdong"></div>
+            <div class="w03" id="move03"></div>
+        </div>
+    </div>
+    
+    <div class="section section4">
+        <div class="bg bg06">
+            <div class="part04-hand"></div>
+            <div class="part04-text-01" id="qipao03"><img src="images/part06-text-01.png"></div>
+            <div class="part04-text-02" id="qipao04"><img src="images/part06-text-02.png"></div>
+            <div class="w04" id="move04"></div>
+        </div>
+    </div>
+    <div class="section section5">
+        <div class="bg bg07">
+            <div class="part07-nushen-01" id="shanlian"><img src="images/part07-nushen-01.png"></div>
+            <div class="part07-bg"><img src="images/part07-bg.png"></div>
+            <div class="part07-light"><img src="images/part07-light.png"></div> 
+            <div class="part07-text"><img src="images/part07-text.png"></div>
+            <div class="part07-arrow"><img src="images/part07-arrow.png"></div>
+            <div class="part07-xin01"><img src="images/part07-xin.png"></div>
+            <div class="part07-xin02"><img src="images/part07-xin.png"></div>
+            <div class="part07-nushen-02"><img src="images/part07-nushen-02.png"></div>
+            <!-- <div class="part07-book"><img src="images/part07-book.png"></div> -->
+            <div class="part07-sa01" id="sa01"><img src="images/part07-sa01.png"></div>
+            <div class="part07-sa02" id="sa02"><img src="images/part07-sa02.png"></div>
+            <div class="part07-sa04" id="sa03"><img src="images/part07-sa04.png"></div>
+            <div class="part07-nushen-03"><img src="images/part07-nushen-03.png"></div>
+            <div class="part07-sa03" id="sa04"><img src="images/part07-sa03.png"></div>
+            <div class="w05" id="move05"></div>
+        </div>
+    </div>
+    <div class="section section6">
+        <div class="bg bg08">
+            <div class="part08-text">嘿嘿...我之所以那么厉害，是因为我有一个专属助理，TA是个万事通，对我有求必应，帮我省时省心，替我解忧。</div>
+            <div class="part08-icon01"><img src="images/part08-icon.png"></div>
+            <div class="part08-m"><img src="images/part08-m.png">
+                <div class="part08-v"><img src="images/part08-v.png"></div>
+                <div class="fx-w">
+                    <ul>
+                        <li class="fx-name">长得好看00000的</li>
+                        <li class="fx-text">都有助理了，还不快去领你的？</li>
+                    </ul>
+                </div>
+            </div>
+            <div id="part08m"></div>
+            <!-- <div class="part08-icon02"><img src="images/part08-icon02.png"></div> -->
+            
+        </div>
+    </div>
+    
+    
+    <!-- 音效 -->
+    
+    <audio id="bgmusic" loop="loop" src="images/She.mp3" style="display:none;"></audio>
+    <audio id="light-m" src="images/light.wav" style="display:none;"><!-- 你的浏览器不支持HTML5,音频播放 --></audio>
+    <audio id="gaizhan-m" src="images/gaizhan.wav" style="display:none;"></audio>
+    <audio id="fui01-m" src="images/fui.wav" style="display:none;"></audio>
+    <audio id="fui02-m" src="images/fui.wav" style="display:none;"></audio>
+    <audio id="fui03-m" src="images/fui.wav" style="display:none;"></audio>
+    <audio id="fui04-m" src="images/fui.wav" style="display:none;"></audio>
+    <audio id="zhengdong-m" src="images/zhengdong.mp3" style="display:none;"></audio>
+    <audio id="shanlian-m" src="images/shanlian.mp3" style="display:none;"></audio>
+    <audio id="qipao-m" src="images/qipao.wav" style="display:none;"></audio>
+    <audio id="part08m" src="images/gaizhan.wav" style="display:none;"></audio>
+    
+</div>
+<script type="text/javascript" src="images/prefixfree.min.js"></script>
+<script type="text/javascript">
+    //  Safari 3.1 到 6.0 版本代码
+    document.getElementById("move01").addEventListener("webkitAnimationEnd", myFunction01);
+    // 标准语法
+    document.getElementById("move01").addEventListener("animationend", myFunction01);
+    function myFunction01 (){
+        $('#fullpage').fullpage.moveTo(2);
+    };
+
+    document.getElementById("move02").addEventListener("webkitAnimationEnd", myFunction02);
+    document.getElementById("move02").addEventListener("animationend", myFunction02);
+    function myFunction02 (){
+        $('#fullpage').fullpage.moveTo(3);
+    };
+
+    document.getElementById("move03").addEventListener("webkitAnimationEnd", myFunction03);
+    document.getElementById("move03").addEventListener("animationend", myFunction03);
+    function myFunction03 (){
+        $('#fullpage').fullpage.moveTo(4);
+    };
+
+    document.getElementById("move04").addEventListener("webkitAnimationEnd", myFunction04);
+    document.getElementById("move04").addEventListener("animationend", myFunction04);
+    function myFunction04 (){
+        $('#fullpage').fullpage.moveTo(5);
+    };
+
+    document.getElementById("move05").addEventListener("webkitAnimationEnd", myFunction05);
+    document.getElementById("move05").addEventListener("animationend", myFunction05);
+    function myFunction05 (){
+        $('#fullpage').fullpage.moveTo(6);
+    }
+
+</script>
+<script type="text/javascript">
+    document.getElementById("light").addEventListener("webkitAnimationStart", light);
+    document.getElementById("light").addEventListener("animationstart", light);
+    function light (){
+        document.getElementById('light-m').play();
+    };
+    document.getElementById("gaizhan").addEventListener("webkitAnimationStart", gaizhan);
+    document.getElementById("gaizhan").addEventListener("animationstart", gaizhan);
+    function gaizhan (){
+        document.getElementById('gaizhan-m').play();
+    };
+    document.getElementById("fui01").addEventListener("webkitAnimationStart", fui01);
+    document.getElementById("fui01").addEventListener("animationstart", fui01);
+    function fui01 (){
+        document.getElementById('fui01-m').play();
+    };
+    document.getElementById("fui02").addEventListener("webkitAnimationStart", fui02);
+    document.getElementById("fui02").addEventListener("animationstart", fui02);
+    function fui02 (){
+        document.getElementById('fui02-m').play();
+    };
+    document.getElementById("fui03").addEventListener("webkitAnimationStart", fui03);
+    document.getElementById("fui03").addEventListener("animationstart", fui03);
+    function fui03 (){
+        document.getElementById('fui03-m').play();
+    };
+    document.getElementById("fui04").addEventListener("webkitAnimationStart", fui04);
+    document.getElementById("fui04").addEventListener("animationstart", fui04);
+    function fui04 (){
+        document.getElementById('fui04-m').play();
+    };
+    document.getElementById("zhengdong").addEventListener("webkitAnimationStart", zhengdong);
+    document.getElementById("zhengdong").addEventListener("animationstart", zhengdong);
+    function zhengdong (){
+        document.getElementById('zhengdong-m').play();
+    };
+    document.getElementById("shanlian").addEventListener("webkitAnimationStart", shanlian);
+    document.getElementById("shanlian").addEventListener("animationstart", shanlian);
+    function shanlian (){
+        document.getElementById('shanlian-m').play();
+    };
+    document.getElementById("qipao01").addEventListener("webkitAnimationStart", qipao01);
+    document.getElementById("qipao01").addEventListener("animationstart", qipao01);
+    function qipao01 (){
+        document.getElementById('qipao-m').play();
+    };
+    document.getElementById("qipao02").addEventListener("webkitAnimationStart", qipao02);
+    document.getElementById("qipao02").addEventListener("animationstart", qipao02);
+    function qipao02 (){
+        document.getElementById('qipao-m').play();
+    };
+    document.getElementById("qipao03").addEventListener("webkitAnimationStart", qipao03);
+    document.getElementById("qipao03").addEventListener("animationstart", qipao03);
+    function qipao03 (){
+        document.getElementById('qipao-m').play();
+    };
+    document.getElementById("qipao04").addEventListener("webkitAnimationStart", qipao04);
+    document.getElementById("qipao04").addEventListener("animationstart", qipao04);
+    function qipao04 (){
+        document.getElementById('qipao-m').play();
+    };
+    document.getElementById("part01text01").addEventListener("webkitAnimationStart", part01text01);
+    document.getElementById("part01text01").addEventListener("animationstart", part01text01);
+    function part01text01 (){
+        document.getElementById('qipao-m').play();
+    };
+    document.getElementById("part01text02").addEventListener("webkitAnimationStart", part01text02);
+    document.getElementById("part01text02").addEventListener("animationstart", part01text02);
+    function part01text02 (){
+        document.getElementById('qipao-m').play();
+    };
+    document.getElementById("sa01").addEventListener("webkitAnimationStart", sa01);
+    document.getElementById("sa01").addEventListener("animationstart", sa01);
+    function sa01 (){
+        document.getElementById('qipao-m').play();
+    };
+    document.getElementById("sa02").addEventListener("webkitAnimationStart", sa02);
+    document.getElementById("sa02").addEventListener("animationstart", sa02);
+    function sa02 (){
+        document.getElementById('qipao-m').play();
+    };
+    document.getElementById("sa03").addEventListener("webkitAnimationStart", sa03);
+    document.getElementById("sa03").addEventListener("animationstart", sa03);
+    function sa03 (){
+        document.getElementById('qipao-m').play();
+    };
+    document.getElementById("sa04").addEventListener("webkitAnimationStart", sa04);
+    document.getElementById("sa04").addEventListener("animationstart", sa04);
+    function sa04 (){
+        document.getElementById('qipao-m').play();
+    };
+    document.getElementById("part08m").addEventListener("webkitAnimationStart", part08m);
+    document.getElementById("part08m").addEventListener("animationstart", part08m);
+    function part08m (){
+        document.getElementById('gaizhan-m').play();
+    };
+
+    document.getElementById("mybgmuisc").addEventListener("webkitAnimationEnd", mybgmusic);
+    document.getElementById("mybgmuisc").addEventListener("animationend", mybgmusic);
+
+        function mybgmusic (){
+            //background music play
+            document.getElementById('bgmusic').play();
+            //background music play and pause
+            var playmusic = true;
+            $('#music').click(function(){
+                if(playmusic){
+                    document.getElementById('bgmusic').pause()
+                    $(this).addClass('on');
+                }else{
+                    document.getElementById('bgmusic').play()
+                    $(this).removeClass('on');
+                }
+                playmusic =!playmusic;
+            });
+
+        }
+
+
+</script>
+<script type="text/javascript">
+
+var inter = function() {
+    var cfg = {
+        /**
+         * jssdk初始数据
+         * @return {[type]} [description]
+         */
+        card: function() {
+            this.url = 'http://weimei-api.vip.com/out/card/3/';
+            this.type = 'get';
+            this.dataType = 'jsonp';
+            this.data = {};
+        },
+        login: function() {
+            this.url = 'http://weixin-api.vip.com/user/loginForAjax';
+            this.type = 'get';
+            this.dataType = 'jsonp';
+            this.data = {
+                
+            };
+        }
+    };
+
+    var inter = {
+        ajax: function( data ) {
+            console.log(data);
+            return $.ajax(data);
+        },
+        execute: function( data , callback ) {
+            function cb( re ) {
+                if(typeof callback == 'object') {
+                    var func = callback[0],
+                        pare = callback[1];
+                    func.call(pare, re);
+                } else {
+                    callback(re);
+                }
+            }
+            this.ajax(data).done(cb);
+        },
+        /**
+         * 数据混合
+         * @param  {[type]} org       原始数据
+         * @param  {[type]} des       新增数据
+         * @param  {[type]} overwrite 是否覆盖
+         * @return {[type]}           合并数据
+         */
+        mix: function( org , des , overwrite ) {
+            overwrite = overwrite || 0; 
+            for(var k in des) {
+                if(!!overwrite || (!overwrite && org[k] == undefined)) {
+                    org[k] = des[k];
+                }
+            }
+            return org;
+        },
+        /**
+         * 外部调用入口
+         * @param  {[type]}   index     调用模块
+         * @param  {Function} callback  回调函数
+         * @param  {[type]}   data      ajax请求参数
+         * @param  {[type]}   overwrite data参数是否覆盖存在的同名参数
+         * @param  {[type]}   param data参数是否覆盖存在的同名参数
+         * @return {[type]}             无返回
+         */
+        request: function( index , callback , data , overwrite , param ) {
+            if( !cfg[index] ) return;
+            if(typeof overwrite == 'object') {
+                param = overwrite;
+                overwrite = 0;
+            }
+            var obj = new cfg[index];
+            if(typeof param == "object") {
+                obj = this.mix(obj, param, 1);
+            }
+            if(typeof data == 'object') {
+                obj.data = this.mix( obj.data , data , overwrite );
+            }
+            this.execute( obj , callback );
+        }
+    };
+    return inter;
+}();
+function callback( re ) {
+    console.log(re);
+}
+var uniqueid = Math.floor(new Date() / 1000);
+inter.request('login', callback, {uniqueid: uniqueid});
+
+</script>
+<script type="text/javascript" src="http://weixin-static.vip.com/uploadfiles/viplittlemodel/js/weixinshare.js"></script>
+<script>
+    //微信分享
+    var args={
+        Edits:true,
+        Title:"当他遇到Ta，发生了什么？",
+        FrendTitle:"当他遇到Ta，发生了什么？",
+        Descs:"自从有了你，生命里都是奇迹",
+        Links:"http://weixin-static.vip.com/uploadfiles/s-project/index.html",
+        Photo:"http://weixin-static.vip.com/uploadfiles/s-project/images/weixin.png"
+    }
+</script>
+
+
+
+</body>
+</html>

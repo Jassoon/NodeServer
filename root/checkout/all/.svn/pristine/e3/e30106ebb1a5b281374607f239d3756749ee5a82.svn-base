@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<link rel="stylesheet" type="text/css" href="http://a.vpimg4.com/upload/actpics/act/2015/7/0731js/h5_common10.28_b.css">
+	<link rel="stylesheet" type="text/css" href="http://a.vpimg4.com/upload/actpics/act/2015/7/0731js/idangerous.swiper.css">
+	<link rel="stylesheet" type="text/css" href="css/css.css?ve=1">
+	<script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+	<style type="text/css">
+		.btn { width: 100%; height: 100%; background: #ffbb1c; border: 1px solid #ffbb1c; border-radius: 3px; color: #fff; font-size: 20px; }
+	</style>
+	<title>S</title>
+</head>
+<body>
+<!-- 选择页 -->	
+	<article class="doc_select">
+		<section class="select_con">
+			<dl class="select">
+				<dt class="select_pic"><img src="images/s_style_1.jpg"><p class="dab dab_y"></p></dt>
+				<dd class="select_text">情侣虐狗款</dd>
+			</dl>
+			<dl class="select">
+				<dt class="select_pic"><img src="images/s_style_2.jpg"><p class="dab"></p></dt>
+				<dd class="select_text">单身狗脱光款</dd>
+			</dl>
+			<dl class="select">
+				<dt class="select_pic"><img src="images/s_style_3.jpg"><p class="dab"></p></dt>
+				<dd class="select_text">男人如衣服，闺蜜如手足</dd>
+			</dl>
+			<dl class="select">
+				<dt class="select_pic"><img src="images/s_style_4.jpg"><p class="dab"></p></dt>
+				<dd class="select_text">好基友一被子</dd>
+			</dl>
+			<p class="clear"></p>
+		</section>
+		<div class="s_goat"><img src="images/s_goat.jpg"></div>
+		<div><img src="images/s_text.jpg"></div>
+	</article>
+
+<!-- 编辑页 -->
+	<article class="doc">
+		<div id="head"><img src="images/p_01_ql.jpg"></div>
+		<section class="con">		
+			<div class="add_text">
+				<div class="user_pic">
+					<img src="images/user_pic.jpg">
+				</div>
+				<div class="user_input">
+					<textarea id="message" placeholder="亲爱滴,约会的餐厅我已选好，给你个表现的机会。"></textarea>
+				</div>
+			</div>
+			<div class="add_talk">
+				<div class="user_pic">
+					<img src="images/user_pic.jpg">
+				</div>
+				<div class="user_talk">
+					<input type="button" class="btn" id="btn" value="说点什么吧！点击录音"/>
+				</div>
+			</div>
+			<div class="in_line"></div>
+			<div>
+				<div class="tab_title">
+					<a class="tab_title_click">北京</a>|<a class="tab_title_click">上海</a>|<a class="tab_title_click">广州</a>|<a class="tab_title_click">深圳</a>|<a class="tab_title_click">其他</a>
+				</div>
+				<div style="position:relative">
+					<img src="images/p_05.png">
+					<ul class="tab_con">
+						<P class="dab"></p>
+						<li class="tab_con_element zi">
+							<div class="swiper-container" id="swiper-container1">
+						      	<div class="swiper-wrapper">
+							        <div class="swiper-slide"><img src="images/o_bj_p1.jpg"></div>
+							        <div class="swiper-slide"><img src="images/o_bj_p1.jpg"></div>
+							        <div class="swiper-slide"><img src="images/o_bj_p1.jpg"></div>
+							        <div class="swiper-slide">
+							        	<div class="other_pic"><img src="images/rest_pic.jpg"></div>
+							        	<ul class="other_text">
+							        		<li class="other_text_a">餐厅 <input type="text" placeholder="输入您心仪的餐厅名称"></li>
+							        		<li class="other_text_b">地址 <input type="text" placeholder="输入餐厅地址/电话/交通"></li>
+							        	</ul>
+							        </div>
+						      	</div>
+						    </div>
+						    <div class="pagination1"></div>
+						</li>
+						<li class="tab_con_element">
+							<div class="swiper-container" id="swiper-container2">
+						      	<div class="swiper-wrapper">
+							        <div class="swiper-slide"><img src="images/o_sh_p1.jpg"></div>
+							        <div class="swiper-slide"><img src="images/o_sh_p1.jpg"></div>
+							        <div class="swiper-slide"><img src="images/o_sh_p1.jpg"></div>
+							        <div class="swiper-slide">
+							        	<div class="other_pic"><img src="images/rest_pic.jpg"></div>
+							        	<ul class="other_text">
+							        		<li class="other_text_a">餐厅 <input type="text" placeholder="输入您心仪的餐厅名称"></li>
+							        		<li class="other_text_b">地址 <input type="text" placeholder="输入餐厅地址/电话/交通"></li>
+							        	</ul>
+							        </div>
+						      	</div>
+						    </div>
+						    <div class="pagination2"></div>
+						</li>
+						<li class="tab_con_element">
+							<div class="swiper-container" id="swiper-container3">
+						      	<div class="swiper-wrapper">
+							        <div class="swiper-slide"><img src="images/o_gz_p1.jpg"></div>
+							        <div class="swiper-slide"><img src="images/o_gz_p1.jpg"></div>
+							        <div class="swiper-slide"><img src="images/o_gz_p1.jpg"></div>
+							        <div class="swiper-slide">
+							        	<div class="other_pic"><img src="images/rest_pic.jpg"></div>
+							        	<ul class="other_text">
+							        		<li class="other_text_a">餐厅 <input type="text" placeholder="输入您心仪的餐厅名称"></li>
+							        		<li class="other_text_b">地址 <input type="text" placeholder="输入餐厅地址/电话/交通"></li>
+							        	</ul>
+							        </div>
+						      	</div>
+						    </div>
+						    <div class="pagination3"></div>
+						</li>
+						<li class="tab_con_element">
+							<div class="swiper-container" id="swiper-container4">
+						      	<div class="swiper-wrapper">
+							        <div class="swiper-slide"><img src="images/o_sz_p1.jpg"></div>
+							        <div class="swiper-slide"><img src="images/o_sz_p1.jpg"></div>
+							        <div class="swiper-slide"><img src="images/o_sz_p1.jpg"></div>
+							        <div class="swiper-slide">
+							        	<div class="other_pic"><img src="images/rest_pic.jpg"></div>
+							        	<ul class="other_text">
+							        		<li class="other_text_a">餐厅 <input type="text" placeholder="输入您心仪的餐厅名称"></li>
+							        		<li class="other_text_b">地址 <input type="text" placeholder="输入餐厅地址/电话/交通"></li>
+							        	</ul>
+							        </div>
+						      	</div>
+						    </div>
+						    <div class="pagination4"></div>
+						</li>
+						<li class="tab_con_element">
+							<div class="swiper-container" id="swiper-container5">
+						      	<div class="swiper-wrapper">
+							        <div class="swiper-slide">
+							        	<div class="other_pic"><img src="images/rest_pic.jpg"></div>
+							        	<ul class="other_text">
+							        		<li class="other_text_a">餐厅 <input type="text" placeholder="输入您心仪的餐厅名称"></li>
+							        		<li class="other_text_b">地址 <input type="text" placeholder="输入餐厅地址/电话/交通"></li>
+							        	</ul>
+							        </div>
+						      	</div>
+						    </div>
+						    <div class="pagination5"></div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div id="summit"><img src="images/p_06.jpg"></div>
+		</section>
+		<div class="huawen"><img src="images/p_07.png"></div>
+		<div><img src="images/p_08.png"></div>
+		<div id="footer"><img src="images/p_09_ql.jpg"></div>
+		<aside class="pop_fx pop_close"><img src="images/pop_fx.png"></aside>
+	</article>
+
+<!-- 展示页 -->	
+	<article class="doc_show">
+		<div id="head"><img src="images/p_01_ql.jpg"></div>
+		<section class="con">		
+			<div class="add_text">
+				<div class="user_pic">
+					<img src="images/user_pic.jpg">
+				</div>
+				<div class="user_input">
+					<textarea id="message" placeholder="亲爱滴,约会的餐厅我已选好，给你个表现的机会。"></textarea>
+				</div>
+			</div>
+			<div class="add_talk">
+				<div class="user_pic">
+					<img src="images/user_pic.jpg">
+				</div>
+				<div class="user_talk">
+					<input type="button" class="btn"  value="说点什么吧！点击录音"/>
+				</div>
+			</div>
+			<div class="in_line"></div>
+			<div class="eat_text"><span>向日葵</span>已选好餐厅，就等你咯！</div>
+			<div class="eat">
+				<img src="images/o_bj_p1.jpg">
+			</div>
+			<div id="summit_to" class="summit_to"><img src="images/andme_show.jpg"></div>
+			<div id="summit_show"><img src="images/andme.jpg"></div>
+		</section>
+		<div class="huawen"><img src="images/p_07.png"></div>
+		<div><img src="images/p_08.png"></div>
+		<div id="footer"><img src="images/p_09_ql.jpg"></div>
+		<aside class="pop_xy pop_close"><img src="images/pop_xy.png"></aside>
+	</article>
+
+	<script src="http://s2.vipstatic.com/js/public/jquery-1.10.2.js?12015102201"></script>
+	<script src="http://a.vpimg4.com/upload/actpics/pun_pur/tem/Template.js"></script>
+	<script type="text/javascript" src="js/fx.js"></script>
+	<script src="http://a.vpimg4.com/upload/actpics/act/2015/7/0731js/idangerous.swiper.min.js"></script>
+	<!-- 操作 -->
+	<script>
+	var swiperstar = function(){
+	  var mySwiper = new Swiper('#swiper-container1',{
+	   	pagination: '.pagination1',
+	   	loop:true,
+	   	onSlideChangeEnd: function(swiper){
+     		$(".dab").removeClass('dab_y')
+    	}
+	  })
+	  var mySwiper2 = new Swiper('#swiper-container2',{
+	    pagination: '.pagination2',
+	   	loop:true,
+	   	onSlideChangeEnd: function(swiper){
+     		$(".dab").removeClass('dab_y')
+    	}
+	  })
+	  var mySwiper3 = new Swiper('#swiper-container3',{
+	    pagination: '.pagination3',
+	   	loop:true,
+	   	onSlideChangeEnd: function(swiper){
+     		$(".dab").removeClass('dab_y')
+    	}
+	  })
+	  var mySwiper4 = new Swiper('#swiper-container4',{
+	    pagination: '.pagination4',
+	    loop:true,
+	    onSlideChangeEnd: function(swiper){
+     		$(".dab").removeClass('dab_y')
+    	}
+	  })
+	  var mySwiper5 = new Swiper('#swiper-container5',{
+	    //pagination: '.pagination5',
+	    //loop:true,
+	    onSlideChangeEnd: function(swiper){
+     		$(".dab").removeClass('dab_y')
+    	}
+	  });
+
+	  //Tab切换
+	  var tabMap = {
+	  		0: mySwiper,
+	  		1: mySwiper2,
+	  		2: mySwiper3,
+	  		3: mySwiper4,
+	  		4: mySwiper5
+	  	};
+	  }
+
+	$("#pic").click(function(){
+		api.pic();
+	});
+	$("#summit").click(function(){
+		$(".pop_fx").show();
+	});
+	$("#summit_to").click(function(){
+		$(".pop_xy").show();
+	});
+	$(".pop_close").click(function(){
+		$(this).hide();
+	});
+	$("#view").delegate(".place_submit","click",function(){
+		api.place_submit(this);	
+	});
+	//Tab切换
+	var nowTab = 0,
+		nowSty = 0;
+	$(".tab_title .tab_title_click").eq(0).addClass("now");
+	$(".tab_title .tab_title_click").click(function() {
+		nowTab = $(this).index();
+		$(".dab").removeClass('dab_y')
+		$(this).addClass("now").siblings().removeClass("now");
+		$(".tab_con .tab_con_element").eq($(".tab_title .tab_title_click").index(this)).show().siblings(".tab_con_element").hide();
+	});
+
+	$(".tab_con_element").click(function(){
+		$(".dab").addClass('dab_y')
+	})
+	$(".select").click(function(){
+		nowSty = $(this).index();
+		$('.dab').removeClass('dab_y');
+		$(this).find('.dab').addClass('dab_y');
+	})
+	$(".s_goat").click(function() {
+		$(".doc_select").hide();
+		$(".doc").fadeIn("slow");
+		if(nowSty==0){
+			swiperstar()
+		}else if(nowSty==1){
+			$(".doc,.doc_show").css("background","#75bb4b")
+			$("#head img").attr("src","images/p_01_dsg.jpg")
+			$("#footer img").attr("src","images/p_09_dsg.jpg")
+			swiperstar()
+		}else if(nowSty==2){
+			$(".doc,.doc_show").css("background","#8461de")
+			$("#head img").attr("src","images/p_01_gm.jpg")
+			$("#footer img").attr("src","images/p_09_gm.jpg")
+			swiperstar()
+		}else if(nowSty==3){
+			$(".doc").css("background","#3cb6ff")
+			$("#head img").attr("src","images/p_01_hjy.jpg")
+			$("#footer img").attr("src","images/p_09_hjy.jpg")
+			swiperstar()
+		}
+
+	});
+	</script>
+	<!-- 逻辑 -->
+	<script>
+		var api = {
+			pic:function(){
+				html = template('t_pic');
+				$("#view").append(html);
+			}
+		}
+	</script>
+	<!-- 模板 -->
+	<script type="text/html" id="t_pic">
+  		<div class='pic'>			
+  			<input type="file" id="myFile" class="myfile" />
+  			<a href="javascript:" id="img_box" class="img_box">点击上传图片</a>
+  			<div class='click_addelement click_addlink' id="click_addlink">点击添加链接</div>
+	  		<div class='click_addelement click_addmars' id="click_addmars">点击添加埋点</div>
+  		</div>
+	</script>
+	
+	<!-- 程序 -->
+</body>
+</html>

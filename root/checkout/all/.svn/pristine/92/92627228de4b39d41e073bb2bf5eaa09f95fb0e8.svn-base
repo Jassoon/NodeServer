@@ -1,0 +1,305 @@
+.overflow_box {
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap; }
+
+.clear {
+  clear: both;
+  font-size: 0; }
+
+.doc_select {
+  position: relative;
+  padding-top: 15px; }
+  .doc_select .select_con {
+    padding: 0 5%; }
+    .doc_select .select_con .select {
+      width: 50%;
+      float: left; }
+      .doc_select .select_con .select .select_pic {
+        position: relative;
+        padding: 5%; }
+        .doc_select .select_con .select .select_pic .dab {
+          position: absolute;
+          right: 8%;
+          bottom: 8%;
+          width: 30px;
+          height: 30px;
+          background: url("../images/dab_n.png") no-repeat;
+          background-size: 100% 100%;
+          z-index: 6;
+          opacity: 1; }
+        .doc_select .select_con .select .select_pic .dab_y {
+          background: url("../images/dab_y.png") no-repeat;
+          background-size: 100% 100%; }
+      .doc_select .select_con .select .select_text {
+        width: 100%;
+        height: 35px;
+        line-height: 35px;
+        text-align: center;
+        font-weight: bold; }
+  .doc_select .s_goat {
+    padding-top: 20px; }
+
+.doc_show {
+  position: relative;
+  background: #ffa56e;
+  display: none; }
+  .doc_show .con {
+    width: 95%;
+    margin: 0 2.5%;
+    background: #fff;
+    padding-top: 10px; }
+    .doc_show .con .add_text {
+      margin: 20px 2.5%;
+      position: relative; }
+      .doc_show .con .add_text .user_pic {
+        width: 15%; }
+      .doc_show .con .add_text .user_input {
+        width: 78%;
+        height: 100%;
+        right: 0;
+        top: 0;
+        border-radius: 10px;
+        position: absolute;
+        background: url("../images/user_input.jpg") no-repeat;
+        background-size: 100% 100%;
+        padding: 3px 0 0 4%; }
+        .doc_show .con .add_text .user_input textarea {
+          width: 95%;
+          height: 95%;
+          color: #999;
+          border: none;
+          background: none;
+          font-size: 12px; }
+    .doc_show .con .add_talk {
+      margin: 20px 2.5%;
+      position: relative; }
+      .doc_show .con .add_talk .user_pic {
+        width: 15%; }
+      .doc_show .con .add_talk .user_talk {
+        width: 80%;
+        height: 100%;
+        right: 0;
+        top: 0;
+        border-radius: 10px;
+        position: absolute; }
+    .doc_show .con .in_line {
+      width: 90%;
+      height: 0;
+      border-top: 1px dashed #ccc;
+      font-size: 0;
+      line-height: 0;
+      margin: 30px auto 20px auto; }
+    .doc_show .con .eat_text {
+      width: 100%;
+      height: 30px;
+      font-size: 14px;
+      line-height: 30px;
+      text-align: center; }
+      .doc_show .con .eat_text span {
+        font-weight: bold;
+        color: #ffbb1c;
+        margin-right: 2px; }
+  .doc_show .huawen {
+    margin: 0 2.5%; }
+  .doc_show .pop_fx {
+    display: none;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    position: fixed;
+    background-size: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 50; }
+
+.doc {
+  position: relative;
+  background: #ffa56e;
+  display: none; }
+  .doc .con {
+    width: 95%;
+    margin: 0 2.5%;
+    background: #fff;
+    padding-top: 10px; }
+    .doc .con .add_text {
+      margin: 20px 2.5%;
+      position: relative; }
+      .doc .con .add_text .user_pic {
+        width: 15%; }
+      .doc .con .add_text .user_input {
+        width: 78%;
+        height: 100%;
+        right: 0;
+        top: 0;
+        border-radius: 10px;
+        position: absolute;
+        background: url("../images/user_input.jpg") no-repeat;
+        background-size: 100% 100%;
+        padding: 3px 0 0 4%; }
+        .doc .con .add_text .user_input textarea {
+          width: 95%;
+          height: 95%;
+          color: #999;
+          border: none;
+          background: none;
+          font-size: 12px; }
+    .doc .con .add_talk {
+      margin: 20px 2.5%;
+      position: relative; }
+      .doc .con .add_talk .user_pic {
+        width: 15%; }
+      .doc .con .add_talk .user_talk {
+        width: 80%;
+        height: 100%;
+        right: 0;
+        top: 0;
+        border-radius: 10px;
+        position: absolute; }
+    .doc .con .in_line {
+      width: 90%;
+      height: 0;
+      border-top: 1px dashed #ccc;
+      font-size: 0;
+      line-height: 0;
+      margin: 30px auto; }
+    .doc .con .tab_title {
+      width: 70%;
+      height: 35px;
+      padding: 0 15%;
+      color: #ccc; }
+      .doc .con .tab_title .now {
+        color: #ffbb1c; }
+      .doc .con .tab_title a {
+        width: 18%;
+        height: 100%;
+        color: #ccc;
+        display: inline-block;
+        text-align: center; }
+    .doc .con .tab_con {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      position: absolute;
+      left: 0;
+      top: 0; }
+      .doc .con .tab_con .dab {
+        position: absolute;
+        right: 5%;
+        top: 8%;
+        width: 30px;
+        height: 30px;
+        background: url("../images/dab_n.png") no-repeat;
+        background-size: 100% 100%;
+        z-index: 6;
+        opacity: 0.5; }
+      .doc .con .tab_con .dab_y {
+        background: url("../images/dab_y.png") no-repeat;
+        background-size: 100% 100%; }
+      .doc .con .tab_con .zi {
+        z-index: 5; }
+      .doc .con .tab_con .tab_con_element {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0; }
+        .doc .con .tab_con .tab_con_element .other_pic {
+          position: absolute;
+          width: 35%;
+          height: 100%;
+          left: 0;
+          top: 0;
+          z-index: 5; }
+          .doc .con .tab_con .tab_con_element .other_pic img {
+            position: absolute;
+            left: 10%;
+            top: 0;
+            top: 10%;
+            height: 80%; }
+        .doc .con .tab_con .tab_con_element .other_text {
+          position: absolute;
+          width: 60%;
+          height: 100%;
+          right: 0;
+          top: 0;
+          z-index: 5;
+          color: #000; }
+          .doc .con .tab_con .tab_con_element .other_text .other_text_a {
+            position: absolute;
+            left: 0;
+            top: 20%;
+            width: 100%;
+            height: 20%;
+            border-bottom: 1px solid #ccc; }
+          .doc .con .tab_con .tab_con_element .other_text .other_text_b {
+            position: absolute;
+            left: 0;
+            top: 50%;
+            width: 100%;
+            height: 20%;
+            border-bottom: 1px solid #ccc; }
+          .doc .con .tab_con .tab_con_element .other_text input {
+            width: 80%;
+            height: 22px;
+            border: none;
+            background: none;
+            font-size: 12px;
+            color: #ccc; }
+  .doc .huawen {
+    margin: 0 2.5%; }
+  .doc .pop_fx {
+    display: none;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    position: fixed;
+    background-size: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 50; }
+
+.swiper-container {
+  width: 95%;
+  height: 83%;
+  color: #fff;
+  margin: 0 2.5%;
+  background: #f9f9f9;
+  text-align: center; }
+
+.swiper-slide {
+  position: relative; }
+
+.swiper-slide .title {
+  font-style: italic;
+  font-size: 42px;
+  margin-top: 80px;
+  margin-bottom: 0;
+  line-height: 45px; }
+
+.swiper-slide p {
+  font-style: italic;
+  font-size: 25px; }
+
+.pagination1, .pagination2, .pagination3, .pagination4, .pagination5 {
+  position: absolute;
+  left: 0;
+  text-align: center;
+  bottom: 5px;
+  width: 100%;
+  background: #fff; }
+
+.swiper-pagination-switch {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 10px;
+  background: #e0e0e0;
+  margin: 0 3px;
+  cursor: pointer; }
+
+.swiper-active-switch {
+  background: #ff9860; }
+
+/*# sourceMappingURL=css.css.map */

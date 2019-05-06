@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>大码家-试衣间</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta name="apple-mobile-web-app-title" content="大码家-试衣间" />
+	<link rel="apple-touch-icon" href="resource/img/share-icon.png"/>
+    <script src="resource/js/jquery.js" type="text/javascript"></script>
+	<link href="resource/css/jquery.fullPage.css" rel="stylesheet" type="text/css">
+    <script src="resource/js/jquery.fullPage.js"></script>
+    <script>
+	$(function(){
+		$('#fullpage').fullpage({
+			verticalCentered: false,
+			navigation: false,
+			scrollingSpeed:500,
+//			onLeave: function(index, nextIndex, direction) {
+//				if(nextIndex == 4){
+//					$('.arrow_next').hide();
+//				}
+//				else{
+//					$('.arrow_next').show();
+//				}
+//			}
+		});
+		$('.arrow_next').click(function() {
+			$('#fullpage').fullpage.moveSectionDown();
+		});
+		$('.arrow_top').click(function(){
+			$('#fullpage').fullpage.moveTo(1);
+		});
+	});
+	</script>
+	
+    <style type="text/css">
+        body {font-family:Arial,Verdana,Helvetica,"microsoft yahei",sans-serif;min-width:320px; background: #e3e3e3} body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td,figure {padding:0;margin:0;} fieldset,img{border:0;} address,caption,cite,code,dfn,em,th,var,optgroup {font-style:normal;font-weight:normal;} h1,h2,h3,h4,h5,h6 {font-size:100%;} input,button,textarea,select,optgroup,option {font-family:inherit;font-size:inherit;font-style:inherit;font-weight:inherit;} ol,ul,li {list-style:none;} table {border-collapse:collapse;border-spacing:0;}caption,th {text-align:left;} a,input,button{ -webkit-tap-highlight-color:rgba(0,0,0,0); -webkit-tap-highlight-color:transparent;/* For some Androids */ -webkit-appearance:none; -moz-appearance:none; text-decoration:none;}
+        /*箭头*/
+        .arrow_next,
+        .arrow_top { margin-left:-10px; display:block; position:absolute; bottom:20px; left:50%; width:20px; height:20px; animation:arrow ease-in 800ms infinite alternate; transform:rotate(135deg)}
+        .arrow_top { display:none;}
+        @keyframes arrow { from{ bottom:20px; opacity:1 } to { bottom:10px; opacity:0 } }
+        .arrow_next .em-a,.arrow_next .em-b,.arrow_top .em-a,.arrow_top .em-b { display: block; width: 18px; height:18px; position: absolute; z-index: 2; border-radius:2px;}
+        .arrow_next .em-a,.arrow_next .em-b{border-left:2px solid #c4c4c4; border-bottom:2px solid #c4c4c4;}
+        .arrow_top .em-a,.arrow_top .em-b{border-right:2px solid #c4c4c4; border-top:2px solid #c4c4c4;}
+        .arrow_next .em-b,.arrow_top .em-b{ left: 7px; top: -7px}
+        /*场景section*/
+        .section{ position: relative; overflow: hidden; background-color:#fff;}
+        /*默认场景背景*/
+        .section .g-cont { position: absolute; left: 0; top: 0; width: 100%; height: 100%; color: #e680b3; }
+        .img-abg { width: 11%; bottom: 0; left: 44.5%; height: 8.237232289950577%; position: absolute; z-index: 5; background: #000; opacity: 0}
+        /*.section img{ width:100%; display:block; margin:0 auto}*/
+        .active{}
+        /*1*/
+        .section1 { background: url(resource/images/3.png) no-repeat; background-size: 100% 100%}
+        .section1 div img ,
+        .section3 div img { width:100%; max-height:100%;}
+        .section1 .img-0 { opacity: 0;}
+        .section1 .img-1 { width: 100%; height: 37.06754530477759%; position: absolute; top: 34.6%; right: -100%; z-index:15;}
+        .section1 .img-2 { width: 100%; height: 37.06754530477759%; position: absolute; top: 34.6%; left: -100%; z-index:20;}
+        .section1 .img-4 { width: 100%; position: absolute; top: -12%; left: 0; z-index: 10;}
+        /*action*/
+        .active .img-0 { animation: secImg0 500ms 100ms ease alternate ; animation-fill-mode:forwards; }
+        .active .img-1 { animation: secImg1 500ms 100ms ease alternate ; animation-fill-mode:forwards; }
+        .active .img-2 { animation: secImg2 500ms 100ms ease alternate ; animation-fill-mode:forwards; }
+        .active .img-4 { animation: secImg4 500ms 600ms ease alternate ; animation-fill-mode:forwards; }
+        @keyframes secImg0 { from { opacity: 0 } to { opacity: 1;} }
+        @keyframes secImg1 { from { top: 44%; right: -100%;} to { top: 34.6%; right: 0;} }
+        @keyframes secImg2 { from { top: 44%; left: -100%;} to { top: 34.6%; left: 0;} }
+        @keyframes secImg4 { from { top: -12%; left: 0%;} to { top: 0%; left: 0;} }
+        /*2*/
+        .section2 { background: #e3e3e3;}
+        .section2 div img { max-height:100%;}
+        .section2 .img-5 { height: 12.9%; position: absolute; top: 10%; left: 40px; z-index: 20; opacity: 0}
+        .section2 .img-6 { height: 53%; position: absolute; bottom: -100%; left: 0; z-index: 15;}
+        .section2 .img-6 img { max-width: 100%;}
+        .section2 .img-7 { height: 66.6%; position: absolute; bottom: 0; left: 0; z-index: 10;}
+        .section2 .img-7 img { width: 100%;}
+        .section2 .img-8 { height: 100%; position: absolute; top: -100%; left: 0; z-index: 20;}
+        .section2 .img-9 { width: 50%; height: 27%; position: absolute; top: 24.4%; left: -100%; z-index: 10;}
+        .section2 .img-10 { width: 50%; height: 30.7%; position: absolute; top: 51.4%; left: -100%; z-index: 10;}
+        /*action*/
+        .active .img-5 { animation: secImg5 200ms 1200ms ease alternate ; animation-fill-mode:forwards;}
+        .active .img-6 { animation: secImg6 500ms 200ms ease alternate ; animation-fill-mode:forwards;}
+        .active .img-8 { animation: secImg8 500ms 200ms ease alternate ; animation-fill-mode:forwards;}
+        .active .img-9 { animation: secImg9 500ms 500ms ease alternate ; animation-fill-mode:forwards;}
+        .active .img-10 { animation: secImg10 500ms 700ms ease alternate ; animation-fill-mode:forwards;}
+        @keyframes secImg5 { from { opacity: 0; left: 100%;} to { opacity: 1; left: 40px;} }
+        @keyframes secImg6 { from { bottom: -100%; left: 0%;} to { bottom: 0%; left: 0;} }
+        @keyframes secImg8 { from { top: -100%; left: 0%;} to { top: 0%; left: 0;} }
+        @keyframes secImg9 { from { left: -100%;} to { left: 0;} }
+        @keyframes secImg10 { from { left: -100%;} to { left: 0;} }
+        /*3*/
+        .section3 {}
+        .section3 div img { width: 100%; height: 100%}
+        .section3 .img-11 { width: 100%; height: 100%;}
+        /*4*/
+        .section4 { background: #ededed;}
+        .section4 div img { width: 100%; height: 100%;}
+        .section4 .img-12 { width: 28.8%; height: 7.8%; top: 4%; left: 6.3%; position: absolute; z-index:20; opacity: 0}
+        .img-13 { width: 18px; height: 18px; position: absolute; z-index:25; opacity: 0}
+        .img-13-1 { top: 25.86490939044481%; left: 14.8%;}
+        .img-13-2 { top: 55.18945634266886%; left: 14.8%;}
+        .img-13-3 { top: 24.71169686985173%; right: 18.8%;}
+        .img-13-4 { top: 23.72322899505766%; left: 14.66666666666667%;}
+        .img-13-5 { top: 20%; right: 18.8%;}
+        .section4 .img-14 { width: 71.6%; height: 75.21%; top: 4%; right: 6.3%; position: absolute; z-index:15; opacity: 0}
+        .section4 .img-15 { width: 78.8%; height: 80.07%; bottom: 7.8%; left: 6.3%; position: absolute; z-index:10; opacity: 0}
+        .section4 .img-16 { width: 57.73333333333333%; height: 14.41515650741351%; bottom: 24.2%; right: 7.4%; position: absolute; z-index:22; opacity: 0}
+        .section4 .img-17 { width: 12.53333333333333%; height: 8.072487644151565%; bottom: 39.04448105436573%; right: 10%; position: absolute; z-index:20; opacity: 0}
+        .section4 .img-18 { width: 32.26666666666667%; height: 37.56177924217463%; top: 12.10873146622735%; left: 11.2%; position: absolute; z-index:20; opacity: 0}
+        .section4 .img-19 { width: 21.73333333333333%; height: 31.3838550247117%; bottom: 14.49752883031301%; left: 15%; position: absolute; z-index:20; opacity: 0}
+        .section4 .img-20 { width: 26.8%; height: 12.8500823723229%; bottom: 9.637561779242175%; right: 26.3%; position: absolute; z-index:20; opacity: 0}
+        .section4 .img-21 { width:29.33333333333333%; height: 1.812191103789127%; bottom: 47.1169686985173%; left: 11.6%; position: absolute; z-index:20; opacity: 0}
+        .section4 .img-22 { width:12.66666666666667%; height: 1.812191103789127%; bottom: 17.05107084019769%; left: 41.06666666666667%; position: absolute; z-index:20; opacity: 0}
+        .section4 .img-23 { width:23.46666666666667%; height: 1.812191103789127%; bottom: 12%; left: 13%; position: absolute; z-index:20; opacity: 0}
+        /*action*/
+        .active .img-12 { animation: secImg12 500ms 200ms ease alternate ; animation-fill-mode:forwards;}
+        .active .img-13 { animation: secImg13 800ms 1700ms ease infinite alternate ; animation-fill-mode:forwards;}
+        .active .img-14 { animation: secImg14 500ms 200ms ease alternate ; animation-fill-mode:forwards;}
+        .active .img-15 { animation: secImg15 500ms 200ms ease alternate ; animation-fill-mode:forwards;}
+        .active .img-16 { animation: secImg16 500ms 700ms ease alternate ; animation-fill-mode:forwards;}
+        .active .img-17 { animation: secImg17 500ms 1300ms ease alternate ; animation-fill-mode:forwards;}
+        .active .img-18 { animation: secImg18 600ms 700ms ease alternate ; animation-fill-mode:forwards;}
+        .active .img-19 { animation: secImg19 600ms 900ms ease alternate ; animation-fill-mode:forwards;}
+        .active .img-20 { animation: secImg20 600ms 1000ms ease alternate ; animation-fill-mode:forwards;}
+        .active .img-21 { animation: secImg21 600ms 1000ms ease alternate ; animation-fill-mode:forwards;}
+        .active .img-22 { animation: secImg22 600ms 1400ms ease alternate ; animation-fill-mode:forwards;}
+        .active .img-23 { animation: secImg23 600ms 1200ms ease alternate ; animation-fill-mode:forwards;}
+
+        .active .img-abg{ opacity: 1}
+        @keyframes secImg12 { from { opacity: 0; top: -50%; left: 6.3%;} to { opacity: 1; top: 4%; left: 6.3%;} }
+        @keyframes secImg13 { from { opacity: 0;} to { opacity: 1; } }
+        @keyframes secImg14 { from { opacity: 0; top: 0%; right: -80%;} to { opacity: 1; top: 4%; right: 6.3%;} }
+        @keyframes secImg15 { from { opacity: 0; bottom: 0%; left: -80%;} to { opacity: 1; bottom: 7.8%; left: 6.3%;} }
+        @keyframes secImg16 { from { opacity: 0; bottom: 24.2%; right: -58%;} to { opacity: 1; bottom: 24.2%; right: 8%;} }
+        @keyframes secImg17 { from { opacity: 0; } to { opacity: 1; } }
+        @keyframes secImg18 { from { opacity: 0; left: -33%; } to { opacity: 1; left: 11.2%; } }
+        @keyframes secImg19 { from { opacity: 0; left: -22%;} to { opacity: 1; left: 15%;} }
+        @keyframes secImg20 { from { opacity: 0; right: -27%; } to { opacity: 1; right: 26.3%; } }
+        @keyframes secImg21 { from { opacity: 0; } to { opacity: 1; } }
+        @keyframes secImg22 { from { opacity: 0; } to { opacity: 1; } }
+        @keyframes secImg23 { from { opacity: 0; } to { opacity: 1; } }
+        /*5*/
+        .section5 { background: #ededed;}
+        .section5 div img { width: 100%; height: 100%;}
+        .section5 .img-15-2 { width: 78.8%; height: 80.07%; bottom: 7.8%; right: 6.3%; position: absolute; z-index:10; opacity: 0 }
+        .section5 .img-24 { width: 28.8%; height: 7.8%; top: 4%; right: 6.3%; position: absolute; z-index:20; opacity: 0 }
+        .section5 .img-25 { width: 71.6%; height: 75.21%; top: 4%; left: 6.3%; position: absolute; z-index:15; opacity: 0 }
+        .section5 .img-26 { width: 29.46666666666667%; height: 25.12355848434926%; top: 20.26359143327842%; right: 14.26666666666667%; position: absolute; z-index:25; opacity: 0 }
+        .section5 .img-27 { width: 20.8%; height: 17.79242174629325%; top: 41.51565074135091%; right: 12.8%; position: absolute; z-index:20; opacity: 0 }
+        .section5 .img-28 { width: 24.13333333333333%; height: 10.54365733113674%; bottom: 28.91268533772652%; right: 28.8%; position: absolute; z-index:20; opacity: 0 }
+        .section5 .img-29 { width: 57.46666666666667%; height: 15.32125205930807%; bottom: 10.0494233937397%; left: 24.66666666666667%; position: absolute; z-index:20; opacity: 0 }
+        .section5 .img-30 { width: 6.666666666666667%; height: 13.59143327841845%; top: 5%; left: 50.66666666666667%; position: absolute; z-index:26; opacity: 0 }
+        .section5 .img-31 { width: 17.6%; height: 1.812191103789127%; bottom: 29.40691927512356%; right: 13.06666666666667%; position: absolute; z-index:26; opacity: 0 }
+        .section5 .img-32 { width: 19.86666666666667%; height: 1.812191103789127%; bottom: 37.89126853377265%; right: 13.46666666666667%; position: absolute; z-index:26; opacity: 0 }
+        .section5 .img-33 { width: 32.4%; height: 1.812191103789127%; top: 17.21581548599671%; right: 8.8%; position: absolute; z-index:26; opacity: 0 }
+        /*action*/
+        .active .img-15-2 { animation: secImg15-2 500ms 200ms ease alternate ; animation-fill-mode:forwards;}
+        .active .img-24 { animation: secImg24 500ms 1200ms ease alternate ; animation-fill-mode:forwards;}
+        .active .img-25 { animation: secImg25 500ms 200ms ease alternate ; animation-fill-mode:forwards;}
+        .active .img-26 { animation: secImg26 500ms 400ms ease alternate ; animation-fill-mode:forwards;}
+        .active .img-27 { animation: secImg27 500ms 700ms ease alternate ; animation-fill-mode:forwards;}
+        .active .img-28 { animation: secImg28 500ms 1000ms ease alternate ; animation-fill-mode:forwards;}
+        .active .img-29 { animation: secImg29 500ms 1200ms ease alternate ; animation-fill-mode:forwards;}
+        .active .img-30 { animation: secImg30 500ms 2000ms ease alternate ; animation-fill-mode:forwards;}
+        .active .img-31 { animation: secImg31 500ms 1400ms ease alternate ; animation-fill-mode:forwards;}
+        .active .img-32 { animation: secImg32 500ms 1600ms ease alternate ; animation-fill-mode:forwards;}
+        .active .img-33 { animation: secImg33 500ms 1800ms ease alternate ; animation-fill-mode:forwards;}
+        @keyframes secImg15-2 { from { opacity: 0; right: -80%; } to { opacity: 1; right: 6.3%; } }
+        @keyframes secImg24 { from { opacity: 0; top: -50%;} to { opacity: 1; top: 4%;} }
+        @keyframes secImg25 { from { opacity: 0; left: -75%} to { opacity: 1; left: 6.3%} }
+        @keyframes secImg26 { from { opacity: 0; right: -50%; } to { opacity: 1; right: 14.26666666666667%;} }
+        @keyframes secImg27 { from { opacity: 0; right: -50%; } to { opacity: 1; right: 12.8%;} }
+        @keyframes secImg28 { from { opacity: 0; right: -50%;} to { opacity: 1; right: 28.8%;} }
+        @keyframes secImg29 { from { opacity: 0; bottom: -80%} to { opacity: 1; bottom: 10.0494233937397% } }
+        @keyframes secImg30 { from { opacity: 0; } to { opacity: 1; } }
+        @keyframes secImg31 { from { opacity: 0; } to { opacity: 1; } }
+        @keyframes secImg32 { from { opacity: 0; } to { opacity: 1; } }
+        @keyframes secImg33 { from { opacity: 0; } to { opacity: 1; } }
+        /*6*/
+        .section6 { background: #ededed;}
+        .section6 div img {  max-height: 100%;}
+        .section6 .img-34 { width: 100%; height: 100%; position: absolute; left: 0; top: 0; z-index: 10; opacity: 0}
+        .section6 .img-35 { width: 25.86666666666667%; height: 19.76935749588138%; position: absolute; right: 5.333333333333333%; top: 30.97199341021417%; z-index: 10; opacity: 0}
+        .section6 .img-36 { width: 27.6%; height: 24.71169686985173%; position: absolute; right: 3.466666666666667%; top: 56.17792421746293%; z-index: 10; opacity: 0}
+        .section6 .img-37 { height: 12.9%; position: absolute; top: 10%; right: 40px; z-index: 20; opacity: 0}
+        /*action*/
+        .active .img-34 { animation: secImg34 500ms 200ms ease alternate ; animation-fill-mode:forwards;}
+        .active .img-35 { animation: secImg35 500ms 400ms ease alternate ; animation-fill-mode:forwards;}
+        .active .img-36 { animation: secImg36 500ms 800ms ease alternate ; animation-fill-mode:forwards;}
+        .active .img-37 { animation: secImg37 200ms 1000ms ease alternate ; animation-fill-mode:forwards;}
+        @keyframes secImg34 { from { opacity: 0; left: -100%;} to { opacity: 1; left: 0;} }
+        @keyframes secImg35 { from { opacity: 0; } to { opacity: 1; } }
+        @keyframes secImg36 { from { opacity: 0; } to { opacity: 1; } }
+        @keyframes secImg37 { from { opacity: 0; right: 100%;} to { opacity: 1; right: 40px;} }
+        /*7*/
+        .section7 { background: #ededed;}
+        .section7 div img { width: 100%; height: 100%}
+        .section7 .img-38 { width: 100%; height: 100%}
+        /*8*/
+        .section8 {}
+        .section8 div img { width: 100%; height: 100%;}
+        .section8 .img-39 { width: 71.6%; height: 75.21%; top: 4%; right: 6.3%; position: absolute; z-index:15; opacity: 0}
+        .section8 .img-12-2 { width: 28.8%; height: 7.8%; top: 4%; left: 6.3%; position: absolute; z-index:20; opacity: 0}
+        .section8 .img-15-3 { width: 78.8%; height: 80.07%; bottom: 7.8%; left: 6.3%; position: absolute; z-index:10; opacity: 0}
+        .section8 .img-39 { width: 71.6%; height: 75.21%; top: 4%; right: 6.3%; position: absolute; z-index:15; opacity: 0}
+        .section8 .img-40 { width: 25.86666666666667%; height: 24.62932454695222%; top: 24.2174629324547%; left: 12.53333333333333%; position: absolute; z-index:15; opacity: 0}
+        .section8 .img-41 { width: 20.66666666666667%; height: 7.00164744645799%; top: 52.38879736408567%; right: 9.066666666666667%; position: absolute; z-index:15; opacity: 0}
+        .section8 .img-42 { width: 24.26666666666667%; height: 21.99341021416804%; bottom: 20.75782537067545%; left: 12.53333333333333%; position: absolute; z-index:15; opacity: 0}
+        .section8 .img-43 { width: 24.8%; height: 11.20263591433278%; bottom: 12.8500823723229%; right: 25.86666666666667%; position: absolute; z-index:15; opacity: 0}
+        .section8 .img-44 { width: 29.33333333333333%; height: 1.812191103789127%; top: 49.91762767710049%; left: 10.4%; position: absolute; z-index:15; opacity: 0}
+        .section8 .img-45 { width: 20.53333333333333%; height: 1.812191103789127%; bottom: 17.46293245469522%; left: 15.46666666666667%; position: absolute; z-index:15; opacity: 0}
+        .section8 .img-46 { width: 15.73333333333333%; height: 1.812191103789127%; bottom: 10.37891268533773%; right: 29.06666666666667%; position: absolute; z-index:15; opacity: 0}
+        .section8 .img-47 { width: 57.73333333333333%; height: 14.41515650741351%; bottom: 24.05271828665568%; right: 6.933333333333333%; position: absolute; z-index:15; opacity: 0}
+        /*action*/
+        .active .img-39 { animation: secImg39 500ms 200ms ease alternate ; animation-fill-mode:forwards;}
+        .active .img-12-2 { animation: secImg12-2 500ms 200ms ease alternate ; animation-fill-mode:forwards;}
+        .active .img-15-3 { animation: secImg15-3 500ms 200ms ease alternate ; animation-fill-mode:forwards;}
+        .active .img-40 { animation: secImg40 500ms 400ms ease alternate ; animation-fill-mode:forwards;}
+        .active .img-41 { animation: secImg41 500ms 600ms ease alternate ; animation-fill-mode:forwards;}
+        .active .img-42 { animation: secImg42 500ms 800ms ease alternate ; animation-fill-mode:forwards;}
+        .active .img-43 { animation: secImg43 500ms 1000ms ease alternate ; animation-fill-mode:forwards;}
+        .active .img-44 { animation: secImg44 500ms 1200ms ease alternate ; animation-fill-mode:forwards;}
+        .active .img-45 { animation: secImg45 500ms 1400ms ease alternate ; animation-fill-mode:forwards;}
+        .active .img-46 { animation: secImg46 500ms 1600ms ease alternate ; animation-fill-mode:forwards;}
+        .active .img-47 { animation: secImg47 500ms 800ms ease alternate ; animation-fill-mode:forwards;}
+        @keyframes secImg15-3 { from { opacity: 0; left: -80%; } to { opacity: 1; left: 6.3%; } }
+        @keyframes secImg12-2 { from { opacity: 0; top: -50%; left: 6.3%;} to { opacity: 1; top: 4%; left: 6.3%;} }
+        @keyframes secImg39 { from { opacity: 0; top: 0%; right: -80%;} to { opacity: 1; top: 4%; right: 6.3%;} }
+        @keyframes secImg40 { from { opacity: 0; left: -50%} to { opacity: 1; left: 12.53333333333333%} }
+        @keyframes secImg41 { from { opacity: 0;} to { opacity: 1;} }
+        @keyframes secImg42 { from { opacity: 0; left: -50%;} to { opacity: 1; left: 12.53333333333333%} }
+        @keyframes secImg43 { from { opacity: 0;} to { opacity: 1;} }
+        @keyframes secImg44 { from { opacity: 0;} to { opacity: 1;} }
+        @keyframes secImg45 { from { opacity: 0;} to { opacity: 1;} }
+        @keyframes secImg46 { from { opacity: 0;} to { opacity: 1;} }
+        @keyframes secImg47 { from { opacity: 0; right: -50%;} to { opacity: 1; right: 6.933333333333333%;} }
+        /*9*/
+        .section9 { background: #ededed;}
+        .section9 div img { width: 100%; height: 100%;}
+        .section9 .img-15-4 { width: 78.8%; height: 80.07%; bottom: 7.8%; right: 6.3%; position: absolute; z-index:10; opacity: 0}
+        .section9 .img-24-2 { width: 28.8%; height: 7.8%; top: 4%; right: 6.3%; position: absolute; z-index:20; opacity: 0 }
+        .section9 .img-48 { width: 71.6%; height: 75.21%; top: 4%; left: 6.3%; position: absolute; z-index:15; opacity: 0}
+        .section9 .img-49 { width: 26%; height: 24.2998352553542%; top: 19.9341021416804%; right: 14.4%; position: absolute; z-index:15; opacity: 0}
+        .section9 .img-50 { width: 17.73333333333333%; height: 20.59308072487644%; top: 39.04448105436573%; right: 13.6%; position: absolute; z-index:15; opacity: 0}
+        .section9 .img-51 { width: 19.46666666666667%; height: 7.57825370675453%; bottom: 30.56013179571664%; right: 23.06666666666667%; position: absolute; z-index:15; opacity: 0}
+        .section9 .img-52 { width: 58.66666666666667%; height: 15.6507413509061%; bottom: 9.884678747940692%; left: 24.4%; position: absolute; z-index:15; opacity: 0}
+        .section9 .img-53 { width: 15.73333333333333%; height: 1.812191103789127%; bottom: 27.1828665568369%; right: 26%; position: absolute; z-index:15; opacity: 0}
+        .section9 .img-54 {width: 15.73333333333333%; height: 1.812191103789127%; bottom: 37.72652388797364%; right: 15.2%; position: absolute; z-index:15; opacity: 0 }
+        .section9 .img-55 {width: 25.86666666666667%; height: 1.812191103789127%; top: 16.47446457990115%; right: 14.26666666666667%; position: absolute; z-index:15; opacity: 0 }
+        /*action*/
+        .active .img-15-4 { animation: secImg15-4 500ms 200ms ease alternate ; animation-fill-mode:forwards;}
+        .active .img-24-2 { animation: secImg24-2 500ms 800ms ease alternate ; animation-fill-mode:forwards;}
+        .active .img-48 { animation: secImg48 500ms 200ms ease alternate ; animation-fill-mode:forwards;}
+        .active .img-49 { animation: secImg49 500ms 600ms ease alternate ; animation-fill-mode:forwards;}
+        .active .img-50 { animation: secImg50 500ms 800ms ease alternate ; animation-fill-mode:forwards;}
+        .active .img-51 { animation: secImg51 500ms 900ms ease alternate ; animation-fill-mode:forwards;}
+        .active .img-52 { animation: secImg52 500ms 800ms ease alternate ; animation-fill-mode:forwards;}
+        .active .img-53 { animation: secImg53 500ms 1100ms ease alternate ; animation-fill-mode:forwards;}
+        .active .img-54 { animation: secImg54 500ms 1200ms ease alternate ; animation-fill-mode:forwards;}
+        .active .img-55 { animation: secImg55 500ms 1300ms ease alternate ; animation-fill-mode:forwards;}
+        @keyframes secImg15-4 { from { opacity: 0; right: -80%; } to { opacity: 1; right: 6.3%; } }
+        @keyframes secImg24-2 { from { opacity: 0; top: -50%;} to { opacity: 1; top: 4%;} }
+        @keyframes secImg48 { from { opacity: 0; left: -75%} to { opacity: 1; left: 6.3%} }
+        @keyframes secImg49 { from { opacity: 0; right: -80%} to { opacity: 1; right: 14.4%;} }
+        @keyframes secImg50 { from { opacity: 0; right: -80%;} to { opacity: 1; right: 13.6%;} }
+        @keyframes secImg51 { from { opacity: 0;} to { opacity: 1;} }
+        @keyframes secImg52 { from { opacity: 0; bottom: -50%} to { opacity: 1; bottom: 9.884678747940692%;} }
+        @keyframes secImg53 { from { opacity: 0;} to { opacity: 1;} }
+        @keyframes secImg54 { from { opacity: 0;} to { opacity: 1;} }
+        @keyframes secImg55 { from { opacity: 0;} to { opacity: 1;} }
+        /*10*/
+        .section10 { background: #fff;}
+        .section10 div img{ max-height: 100%}
+        .section10 .img-56 { width: 100%; height: 100%; position: absolute; right: 0; top: 0; opacity: 0}
+        .section10 .img-57 { width: 100%; height: 100%; position: absolute; right: 0; top: 0; opacity: 0}
+        .section10 .img-58 { width: 26.13333333333333%; height: 19.11037891268534%; left: 7.6%; top: 28.500823723229%; position: absolute; opacity: 0;}
+        .section10 .img-59 { width: 30.66666666666667%; height: 24.71169686985173%; left: 7.6%; top: 53.70675453047776%; position: absolute; opacity: 0;}
+        .section10 .img-60 { height: 12.9%; position: absolute; top: 10%; left: 40px; z-index: 20; opacity: 0}
+        /*action*/
+        .active .img-56 { animation: secImg56 500ms 200ms ease alternate ; animation-fill-mode:forwards;}
+        .active .img-57 { animation: secImg57 500ms 500ms ease alternate ; animation-fill-mode:forwards;}
+        .active .img-58 { animation: secImg58 500ms 500ms ease alternate ; animation-fill-mode:forwards;}
+        .active .img-59 { animation: secImg59 500ms 800ms ease alternate ; animation-fill-mode:forwards;}
+        .active .img-60 { animation: secImg60 200ms 1000ms ease alternate ; animation-fill-mode:forwards;}
+        @keyframes secImg56 { from { opacity: 0; right: -100%} to { opacity: 1; right: 0%;} }
+        @keyframes secImg57 { from { opacity: 0; right: -100%} to { opacity: 1; right: 0%;} }
+        @keyframes secImg58 { from { opacity: 0; left: -50%;} to { opacity: 1; left: 7.6%;} }
+        @keyframes secImg59 { from { opacity: 0; left: -50%;} to { opacity: 1; left: 7.6%;} }
+        @keyframes secImg60 { from { opacity: 0; left: 100%} to { opacity: 1; left: 40px;} }
+        /*11*/
+        /*12*/
+        /*13*/
+        /*14*/
+        /*15*/
+    </style>
+</head>
+<body>
+<div id="fullpage">
+	<!--1-->
+    <div class="section section1" id="section1">
+        <div class="g-cont">
+            <div class="img-0"><img wait="resource/images/0.png"></div>
+            <div class="img-1"><img wait="resource/images/1.png"></div>
+            <div class="img-2"><img wait="resource/images/2.png"></div>
+            <div class="img-4"><img wait="resource/images/4.png"></div>
+        </div>
+    </div>
+    <!--2-->
+    <div class="section section2">
+        <div class="g-cont">
+            <div class="img-5"><img src="resource/images/5.png"></div>
+            <div class="img-6"><img src="resource/images/6.png"></div>
+            <div class="img-7"><img src="resource/images/7.png"></div>
+            <div class="img-8"><img src="resource/images/8.png"></div>
+            <div class="img-9"><img src="resource/images/9.png"></div>
+            <div class="img-10"><img src="resource/images/10.png"></div>
+    	</div>
+    </div>
+    <!--3-->
+    <div class="section section3">
+        <div class="g-cont">
+    		<div class="img-11"><img src="resource/images/11.png"></div>
+    	</div>
+    </div>
+    <!--4-->
+    <div class="section section4">
+    	<div class="g-cont">
+            <div class="img-12"><img src="resource/images/12.png"></div>
+            <div class="img-13 img-13-1"><img src="resource/images/13.png"></div>
+            <div class="img-13 img-13-2"><img src="resource/images/13.png"></div>
+            <div class="img-14"><img src="resource/images/14.png"></div>
+            <div class="img-15"><img src="resource/images/15.png"></div>
+            <div class="img-16"><img src="resource/images/16.png"></div>
+            <div class="img-17"><img src="resource/images/17.png"></div>
+            <div class="img-18"><img src="resource/images/18.png"></div>
+            <div class="img-19"><img src="resource/images/19.png"></div>
+            <div class="img-20"><img src="resource/images/20.png"></div>
+            <div class="img-21"><img src="resource/images/21.png"></div>
+            <div class="img-22"><img src="resource/images/22.png"></div>
+            <div class="img-23"><img src="resource/images/23.png"></div>
+            <div class="img-abg"></div>
+    	</div>
+ 	</div>
+    <!--5-->
+    <div class="section section5">
+        <div class="g-cont">
+            <div class="img-24"><img src="resource/images/24.png"></div>
+            <div class="img-15-2"><img src="resource/images/15.png"></div>
+            <div class="img-25"><img src="resource/images/25.png"></div>
+            <div class="img-26"><img src="resource/images/26.png"></div>
+            <div class="img-13 img-13-3"><img src="resource/images/13.png"></div>
+            <div class="img-27"><img src="resource/images/27.png"></div>
+            <div class="img-28"><img src="resource/images/28.png"></div>
+            <div class="img-29"><img src="resource/images/29.png"></div>
+            <div class="img-30"><img src="resource/images/30.png"></div>
+            <div class="img-31"><img src="resource/images/31.png"></div>
+            <div class="img-32"><img src="resource/images/32.png"></div>
+            <div class="img-33"><img src="resource/images/33.png"></div>
+            <div class="img-abg"></div>
+        </div>
+    </div>
+    <!--6-->
+    <div class="section section6">
+        <div class="g-cont">
+            <div class="img-34"><img src="resource/images/34.png"></div>
+            <div class="img-35"><img src="resource/images/35.png"></div>
+            <div class="img-36"><img src="resource/images/36.png"></div>
+            <div class="img-37"><img src="resource/images/37.png"></div>
+        </div>
+    </div>
+    <!--7-->
+    <div class="section section7">
+        <div class="g-cont">
+            <div class="img-38"><img src="resource/images/38.png"></div>
+        </div>
+    </div>
+    <!--8-->
+    <div class="section section8">
+        <div class="g-cont">
+            <div class="img-39"><img src="resource/images/39.png"></div>
+            <div class="img-15-3"><img src="resource/images/15.png"></div>
+            <div class="img-12-2"><img src="resource/images/12.png"></div>
+            <div class="img-40"><img src="resource/images/40.png"></div>
+            <div class="img-41"><img src="resource/images/41.png"></div>
+            <div class="img-42"><img src="resource/images/42.png"></div>
+            <div class="img-43"><img src="resource/images/43.png"></div>
+            <div class="img-44"><img src="resource/images/44.png"></div>
+            <div class="img-45"><img src="resource/images/45.png"></div>
+            <div class="img-46"><img src="resource/images/46.png"></div>
+            <div class="img-47"><img src="resource/images/47.png"></div>
+            <div class="img-13 img-13-4"><img src="resource/images/13.png"></div>
+            <div class="img-abg"></div>
+        </div>
+    </div>
+    <!--9-->
+    <div class="section section9">
+        <div class="g-cont">
+            <div class="img-48"><img src="resource/images/48.png"></div>
+            <div class="img-49"><img src="resource/images/49.png"></div>
+            <div class="img-50"><img src="resource/images/50.png"></div>
+            <div class="img-51"><img src="resource/images/51.png"></div>
+            <div class="img-52"><img src="resource/images/52.png"></div>
+            <div class="img-53"><img src="resource/images/53.png"></div>
+            <div class="img-54"><img src="resource/images/54.png"></div>
+            <div class="img-55"><img src="resource/images/55.png"></div>
+            <div class="img-15-4"><img src="resource/images/15.png"></div>
+            <div class="img-24-2"><img src="resource/images/24.png"></div>
+            <div class="img-13 img-13-5"><img src="resource/images/13.png"></div>
+            <div class="img-abg"></div>
+        </div>
+    </div>
+    <!--10-->
+    <div class="section section10">
+        <div class="g-cont">
+            <div class="img-56"><img src="resource/images/56.png"></div>
+            <div class="img-57"><img src="resource/images/57.png"></div>
+            <div class="img-58"><img src="resource/images/58.png"></div>
+            <div class="img-59"><img src="resource/images/59.png"></div>
+            <div class="img-60"><img src="resource/images/60.png"></div>
+        </div>
+    </div>
+    <!--11-->
+    <div class="section section11">
+        <div class="g-cont">
+
+        </div>
+    </div>
+    <!--12-->
+    <div class="section section12">
+        <div class="g-cont">
+
+        </div>
+    </div>
+    <!--13-->
+    <div class="section section13">
+        <div class="g-cont">
+
+        </div>
+    </div>
+    <!--14-->
+    <div class="section section14">
+        <div class="g-cont">
+
+        </div>
+    </div>
+    <!--15-->
+    <div class="section section15">
+        <div class="g-cont">
+
+        </div>
+    </div>
+</div>
+<span class="arrow_next"><em class="em-a"></em><!--<em class="em-b"></em>--></span>
+<span class="arrow_top"><em class="em-a"></em><!--<em class="em-b"></em>--></span>
+<!--CSS3前缀-->
+<script type="text/javascript" src="resource/js/prefixfree.min.js"></script>
+<script type="text/javascript" src="resource/js/weixinshare.js"></script>
+<script>
+	//微信分享
+    var args={
+        Edits:true,
+        Title:"",
+		FrendTitle:"",
+        Descs:"",
+        Links:"",
+        Photo:""
+    }
+</script>
+<script type="text/javascript">
+
+var start = (function() {
+    function iLoader( self , src , callback ) {
+        var img = new Image();
+        img.src = src;
+        img.onload = function( e ) {
+            console.log(e.target);
+            self.src = src;
+            callback();
+        }
+        img.onerror = function(e) {
+            callback();
+        }
+    }
+    function start( callback ) {
+        var imgs = document.getElementsByTagName("img");
+        var len = imgs.length,
+            count = 0;
+        function counter() {
+            if(++ count == len) {
+                callback();
+            }
+        }
+        for(var i = 0; i < imgs.length; i ++) {
+            var src = imgs[i].getAttribute('wait');
+            iLoader(imgs[i], src, counter);
+        }
+    }
+    return start;
+})();
+
+function callback() {
+    section1.classList.add('active');
+}
+start(callback);
+
+</script>
+</body>
+</html>
